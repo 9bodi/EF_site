@@ -12,9 +12,10 @@ export const metadata: Metadata = {
     "Organisme de formation agréé, spécialisé dans la formation des élus locaux. Formations en ligne et intra-collectivité. Financé jusqu'à 100% par votre DIFE.",
   metadataBase: new URL("https://eluformation.fr"),
   icons: {
-    icon: "/img/LOGO_ELU-FORMATION_favicon.png",
-    apple: "/img/LOGO_ELU-FORMATION_favicon.png",
-  },
+  icon: "/favicon.ico",
+  apple: "/img/LOGO_ELU-FORMATION_favicon.png",
+},
+
 };
 
 export default function RootLayout({
