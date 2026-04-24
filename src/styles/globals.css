@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueThin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueThin-Italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueLight-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueRegular-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBook.woff2") format("woff2");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBook-Italic.woff2") format("woff2");
+  font-weight: 450;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBold-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueHeavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueHeavy-Italic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uni Neue";
+  src: url("/fonts/UniNeueBlack-Italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-navy: #221B6D;
+  --color-navy-light: #373B94;
+  --color-red: #A50634;
+  --color-red-hover: #8a052c;
+  --color-rose: #D36C6C;
+  --color-rose-light: #e8a3a3;
+  --color-gray-light: #F2F2F2;
+  --color-gray-text: #4a4a4a;
+  --color-white: #ffffff;
+
+  --color-primary: #A50634;
+  --color-primary-hover: #8a052c;
+  --color-secondary: #221B6D;
+  --color-accent: #D36C6C;
+  --color-green-dife: #2a9d5c;
+
+  --font-heading: "Uni Neue", system-ui, sans-serif;
+  --font-body: "Uni Neue", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Taille de base augmentée */
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
