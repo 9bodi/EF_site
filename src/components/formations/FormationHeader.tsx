@@ -19,8 +19,9 @@ export default function FormationHeader({ formation }: { formation: Formation })
           {/* Colonne gauche — texte */}
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="green">DIFE éligible</Badge>
-              {formation.tag && <Badge variant="light">{formation.tag}</Badge>}
+              <Badge variant="dife">DIFE éligible</Badge>
+{formation.tag && <Badge variant="highlight">{formation.tag}</Badge>}
+
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold font-heading mb-4 leading-tight">
