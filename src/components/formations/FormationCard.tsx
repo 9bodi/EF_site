@@ -18,7 +18,7 @@ export default function FormationCard({ formation }: { formation: Formation }) {
               width={600}
               height={338}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              unoptimized
+              
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center group-hover:bg-gray-light transition-colors">

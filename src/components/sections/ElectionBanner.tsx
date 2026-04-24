@@ -15,7 +15,7 @@ export default function ElectionBanner() {
               width={800}
               height={500}
               className="w-full h-full object-cover"
-              unoptimized
+              
             />
           </div>
 

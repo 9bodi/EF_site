@@ -93,7 +93,7 @@ export default function FormationsCommunePage() {
                   height={600}
                   className="w-full h-full object-cover"
                   priority
-                  unoptimized
+                  
                 />
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function FormationsCommunePage() {
                         width={600}
                         height={338}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        unoptimized
+                        
                       />
                     </div>
                   )}

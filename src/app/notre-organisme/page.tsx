@@ -150,7 +150,7 @@ export default function NotreOrganismePage() {
                     alt={person.name}
                     fill
                     className="object-cover object-top"
-                    unoptimized
+                    
                   />
                 </div>
                 <div className="p-6">

@@ -22,7 +22,7 @@ export default function MapSection() {
       width={400}
       height={400}
       className="w-full h-auto object-contain"
-      unoptimized
+      
     />
   </div>
 
@@ -35,7 +35,7 @@ export default function MapSection() {
       width={160}
       height={300}
       className="w-full h-auto object-contain"
-      unoptimized
+      
     />
   </div>
 </div>

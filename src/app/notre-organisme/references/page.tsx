@@ -65,7 +65,7 @@ export default function ReferencesPage() {
                 width={400}
                 height={400}
                 className="w-full h-auto object-contain"
-                unoptimized
+                
               />
             </div>
             <div className="max-w-[100px] rounded-xl overflow-hidden shadow-sm">
@@ -75,7 +75,7 @@ export default function ReferencesPage() {
                 width={100}
                 height={200}
                 className="w-full h-auto object-contain"
-                unoptimized
+                
               />
             </div>
           </div>

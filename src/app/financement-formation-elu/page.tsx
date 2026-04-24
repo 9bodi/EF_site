@@ -108,7 +108,7 @@ export default function FinancementPage() {
                   height={500}
                   className="w-full h-auto object-cover"
                   priority
-                  unoptimized
+              
                 />
               </div>
             </div>

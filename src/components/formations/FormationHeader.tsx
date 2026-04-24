@@ -60,7 +60,7 @@ export default function FormationHeader({ formation }: { formation: Formation })
                   fill
                   className="object-cover"
                   priority
-                  unoptimized
+                  
                 />
               ) : (
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo/30 to-navy-light flex items-center justify-center">

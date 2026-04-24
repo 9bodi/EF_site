@@ -67,7 +67,7 @@ export default function MonCompteEluPage() {
                   height={250}
                   className="w-auto h-auto max-h-40 object-contain mb-6"
                   priority
-                  unoptimized
+                  
                 />
                 <p className="text-4xl font-bold text-navy font-heading">
                   800&nbsp;€

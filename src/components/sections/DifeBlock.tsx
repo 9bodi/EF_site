@@ -99,7 +99,7 @@ export default function DifeBlock() {
                 width={280}
                 height={280}
                 className="w-auto h-auto max-h-48 object-contain mb-6"
-                unoptimized
+                
               />
               <p className="text-4xl font-bold text-navy font-heading">
                 800&nbsp;€
