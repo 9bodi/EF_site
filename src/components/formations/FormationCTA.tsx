@@ -28,7 +28,7 @@ export default function FormationCTA({ formateur }: { formateur: string }) {
               Prêt(e) à vous former ?
             </h2>
             <p className="mt-3 text-gray-300">
-              Inscription en ligne ou rappel par un conseiller — c&apos;est vous qui
+              Inscription en ligne ou rappel par un conseiller - c&apos;est vous qui
               choisissez.
             </p>
 
@@ -37,7 +37,7 @@ export default function FormationCTA({ formateur }: { formateur: string }) {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                subtitle="Financé par mon DIFE — Confirmation immédiate"
+                subtitle="Financé par mon DIFE - Confirmation immédiate"
               >
                 Je m&apos;inscris à cette formation
               </Button>
@@ -46,7 +46,7 @@ export default function FormationCTA({ formateur }: { formateur: string }) {
                 href="/contact"
                 variant="outline"
                 size="lg"
-                subtitle="Réponse sous 24h — Gratuit"
+                subtitle="Réponse sous 24h - Gratuit"
                 className="border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
                 Être rappelé par un conseiller

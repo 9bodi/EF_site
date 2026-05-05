@@ -95,14 +95,14 @@ export default function DifeBlock() {
             <div className="w-full max-w-sm bg-white rounded-2xl border border-gray-200 shadow-lg p-8 flex flex-col items-center text-center">
               <Image
                 src="/img/dife-logo.png"
-                alt="DIFE — Droit Individuel à la Formation des Élus"
+                alt="DIFE - Droit Individuel à la Formation des Élus"
                 width={280}
                 height={280}
                 className="w-auto h-auto max-h-48 object-contain mb-6"
                 
               />
               <p className="text-4xl font-bold text-navy font-heading">
-                800&nbsp;€
+                400&nbsp;€
               </p>
               <p className="text-sm text-gray-text mt-2">
                 par an et par élu, cumulables

@@ -9,6 +9,7 @@ import MapSection from "@/components/sections/MapSection";
 import OrganismePreview from "@/components/sections/OrganismePreview";
 import Newsletter from "@/components/sections/Newsletter";
 import Partners from "@/components/sections/Partners";
+import ElearningPreview from "@/components/sections/ElearningPreview";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ReassuranceBanner />
       <ElectionBanner />
       <OffersGrid />
+      <ElearningPreview />
       <FeaturedFormations />
       <DifeBlock />
       <Testimonials />

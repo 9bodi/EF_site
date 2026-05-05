@@ -6,7 +6,7 @@ export const SITE = {
     "Organisme de formation agréé, spécialisé dans la formation des élus locaux.",
   phone: ["09 85 03 01 36", "07 69 69 49 94"],
   email: "contact@eluformation.fr",
-  address: "1 Avenue Victor Hugo — 27200 Vernon",
+  address: "1 Avenue Victor Hugo - 27200 Vernon",
   hours: "Lundi - Vendredi : 9h00 - 18h00",
   social: {
     linkedin: "https://linkedin.com/company/eluformation",

@@ -15,7 +15,7 @@ export default function FeaturedFormations() {
       <Container>
         <SectionTitle
           title="Vos prochaines sessions de formation"
-          subtitle="Toutes nos formations sont finançables par votre DIFE — éligibles Mon Compte Élu"
+          subtitle="Toutes nos formations sont finançables par votre DIFE - éligibles Mon Compte Élu"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

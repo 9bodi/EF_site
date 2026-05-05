@@ -6,7 +6,7 @@ import Image from "next/image";
 import { CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "DIFE élu — Financement de votre formation",
+  title: "DIFE élu - Financement de votre formation",
   description:
     "Tout comprendre sur le Droit Individuel à la Formation d'Élu (DIFE). Simulez vos droits, mobilisez votre budget formation, inscrivez-vous. Conseiller dédié.",
 };
@@ -34,7 +34,7 @@ const difeInfo = [
   },
   {
     q: "Comment mobiliser ?",
-    a: "Via le portail Mon Compte Élu sur moncompteformation.gouv.fr — nos conseillers vous guident.",
+    a: "Via le portail Mon Compte Élu sur moncompteformation.gouv.fr - nos conseillers vous guident.",
   },
 ];
 
@@ -64,7 +64,7 @@ const faq = [
   },
   {
     q: "Ma commune peut-elle financer ma formation en plus du DIFE ?",
-    a: "Oui. Les deux financements sont cumulables. Si le coût de la formation dépasse votre crédit DIFE, la commune peut prendre en charge le surplus dans le cadre de son budget formation — c'est une dépense obligatoire prévue par le Code général des collectivités territoriales.",
+    a: "Oui. Les deux financements sont cumulables. Si le coût de la formation dépasse votre crédit DIFE, la commune peut prendre en charge le surplus dans le cadre de son budget formation - c'est une dépense obligatoire prévue par le Code général des collectivités territoriales.",
   },
   {
     q: "Je n'ai pas d'identité numérique La Poste. Comment faire ?",
@@ -85,14 +85,14 @@ export default function FinancementPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
-                Vos droits à la formation d&apos;élu — Le DIFE expliqué simplement
+                Vos droits à la formation d&apos;élu - Le DIFE expliqué simplement
               </h1>
               <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-                Depuis 2022, chaque élu local — qu&apos;il soit indemnisé ou non —
+                Depuis 2022, chaque élu local - qu&apos;il soit indemnisé ou non -
                 dispose d&apos;un Droit Individuel à la Formation (DIFE). Ce budget
                 formation est financé par la Caisse des Dépôts et Consignations,
                 indépendamment du budget de votre commune. Pourtant, la majorité
-                des élus ne savent pas qu&apos;ils l&apos;ont — ou ne savent pas comment
+                des élus ne savent pas qu&apos;ils l&apos;ont - ou ne savent pas comment
                 l&apos;utiliser.
               </p>
               <p className="mt-4 text-red font-semibold text-lg">

@@ -26,7 +26,7 @@ export default function CampusCTA({ formationSlug }: CampusCTAProps) {
             </h3>
             <p className="mt-2 text-gray-300 text-sm">
               Modules interactifs, quiz de validation, suivi de progression et
-              attestation de réussite — tout est intégré dans votre espace
+              attestation de réussite - tout est intégré dans votre espace
               personnel sur campus.eluformation.fr
             </p>
           </div>

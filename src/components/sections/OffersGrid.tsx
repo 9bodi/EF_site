@@ -35,9 +35,10 @@ export default function OffersGrid() {
   return (
     <section className="py-16 md:py-24 bg-gray-warm">
       <Container>
-        <SectionTitle
-          title="Des formations pensées pour votre rythme d'élu"
-        />
+       <SectionTitle
+  title="Formations sur-mesure et adaptées à l'agenda des élus"
+/>
+
 
         <div className="grid md:grid-cols-3 gap-8">
           {offers.map((offer) => {

@@ -16,7 +16,7 @@ export default function FormationHeader({ formation }: { formation: Formation })
     <section className="bg-navy text-white py-16">
       <Container>
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Colonne gauche — texte */}
+          {/* Colonne gauche - texte */}
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="dife">DIFE éligible</Badge>
@@ -50,7 +50,7 @@ export default function FormationHeader({ formation }: { formation: Formation })
             </div>
           </div>
 
-          {/* Colonne droite — photo */}
+          {/* Colonne droite - photo */}
           <div className="hidden lg:block">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               {formation.image ? (

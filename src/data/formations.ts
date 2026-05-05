@@ -43,7 +43,7 @@ export const formations: Formation[] = [
       "Formation essentielle pour sécuriser et améliorer votre action d'élu.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Évaluer ses qualités d'orateur",
@@ -63,7 +63,7 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
@@ -76,7 +76,7 @@ export const formations: Formation[] = [
     shortTitle: "Budget municipal",
     h1: "Bien comprendre le budget et les finances locales",
     metaTitle:
-      "Formation budget municipal pour élus locaux — Comprendre les finances de votre commune | Élu Formation",
+      "Formation budget municipal pour élus locaux - Comprendre les finances de votre commune | Élu Formation",
     metaDescription:
       "Prenez des décisions financières éclairées en maîtrisant les notions essentielles de la procédure budgétaire. Éligible DIFE.",
     accroche:
@@ -85,7 +85,7 @@ export const formations: Formation[] = [
       "Prenez des décisions financières éclairées en maîtrisant les notions essentielles de la procédure budgétaire.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Disposer de bonnes bases en finances publiques locales",
@@ -104,7 +104,7 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
@@ -117,7 +117,7 @@ export const formations: Formation[] = [
     shortTitle: "Urbanisme",
     h1: "Urbanisme : appréhender le cadre légal et les responsabilités de l'élu local",
     metaTitle:
-      "Formation urbanisme pour élus locaux — Cadre légal et responsabilités | Élu Formation",
+      "Formation urbanisme pour élus locaux - Cadre légal et responsabilités | Élu Formation",
     metaDescription:
       "Comprenez les règles et évitez les risques juridiques pour prendre des décisions pertinentes et sécurisées en matière d'urbanisme. Éligible DIFE.",
     accroche:
@@ -126,7 +126,7 @@ export const formations: Formation[] = [
       "Formation essentielle pour sécuriser et améliorer votre action d'élu.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Comprendre le contexte de l'urbanisme et le rôle des différents acteurs (ville, EPCI, autres collectivités, État, bailleurs...)",
@@ -151,7 +151,7 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
@@ -173,7 +173,7 @@ export const formations: Formation[] = [
       "Une formation essentielle pour s'orienter, comprendre le fonctionnement des collectivités territoriales, connaître vos partenaires et décrypter le système pour agir efficacement.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Se repérer dans le mille-feuille de la décentralisation",
@@ -194,7 +194,7 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
@@ -203,11 +203,11 @@ export const formations: Formation[] = [
   {
     slug: "ia-pour-elus",
     image: "/img/formations/ia-pour-elus.png",
-    title: "Gagner en efficacité avec l'intelligence artificielle générative",
+    title: "Gagner en efficacité avec l'IA générative",
     shortTitle: "IA pour les élus",
     h1: "Gagner en efficacité avec l'intelligence artificielle générative en tant qu'élus locaux",
     metaTitle:
-      "Formation IA pour élus locaux — Intelligence artificielle générative | Élu Formation",
+      "Formation IA pour élus locaux - Intelligence artificielle générative | Élu Formation",
     metaDescription:
       "Comprendre les fondamentaux de l'IA générative, utiliser des outils IA dans vos missions quotidiennes et améliorer votre action d'élu. Éligible DIFE.",
     accroche:
@@ -216,7 +216,7 @@ export const formations: Formation[] = [
       "Une formation essentielle pour comprendre les fondamentaux de l'IA générative, utiliser des outils IA dans vos missions quotidiennes et améliorer votre action d'élu.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Comprendre le fonctionnement de l'intelligence artificielle générative et ses usages concrets",
@@ -240,27 +240,27 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
     },
   },
-  {
+  /*{
     slug: "gestion-conflits",
     image: "/img/formations/gestion-conflits.png",
     title: "Gestion des conflits",
     shortTitle: "Gestion des conflits",
-    h1: "Formation gestion des conflits pour élus — Faire face aux tensions dans votre commune",
+    h1: "Formation gestion des conflits pour élus - Faire face aux tensions dans votre commune",
     metaTitle:
-      "Formation gestion des conflits pour élus — Faire face aux tensions dans votre commune | Élu Formation",
+      "Formation gestion des conflits pour élus - Faire face aux tensions dans votre commune | Élu Formation",
     metaDescription:
       "Riverains en colère, tensions au sein du conseil, relations difficiles avec des agents ou des associations... Formation éligible DIFE.",
     accroche:
-      "Riverains en colère, tensions au sein du conseil, relations difficiles avec des agents ou des associations... La gestion des conflits est l'une des compétences les plus demandées — et les moins formées — des élus locaux.",
+      "Riverains en colère, tensions au sein du conseil, relations difficiles avec des agents ou des associations... La gestion des conflits est l'une des compétences les plus demandées - et les moins formées - des élus locaux.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Comprendre les mécanismes du conflit et ses étapes",
@@ -269,7 +269,7 @@ export const formations: Formation[] = [
       "Gérer les situations de tensions avec les administrés en réunions publiques",
     ],
     programme: [
-      { title: "Anatomie du conflit — pourquoi ça explose et comment l'anticiper" },
+      { title: "Anatomie du conflit - pourquoi ça explose et comment l'anticiper" },
       { title: "Les outils de la communication non-violente pour l'élu" },
       { title: "Mises en situation : réunion publique houleuse, conflit au conseil" },
       { title: "Construire sa propre boîte à outils anti-conflit" },
@@ -279,18 +279,18 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
     },
-  },
+  },*/
   {
     slug: "fondamentaux-mandat",
     image: "/img/formations/fondamentaux-mandat.png",
     title: "Fondamentaux du mandat",
     shortTitle: "Fondamentaux du mandat",
-    h1: "Formation fondamentaux du mandat pour nouveaux élus — Comprendre son rôle et ses responsabilités",
+    h1: "Formation fondamentaux du mandat pour nouveaux élus - Comprendre son rôle et ses responsabilités",
     metaTitle:
       "Formation fondamentaux du mandat pour nouveaux élus | Élu Formation",
     metaDescription:
@@ -299,7 +299,7 @@ export const formations: Formation[] = [
       "Vous venez d'être élu(e) en mars 2026. Bienvenue dans l'une des aventures civiques les plus exigeantes et les plus enrichissantes qui soit. Cette formation est votre point de départ.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     tag: "RECOMMANDÉ pour les élus 2026",
     objectifs: [
@@ -312,14 +312,14 @@ export const formations: Formation[] = [
       { title: "Qui fait quoi ? Le maire, les adjoints, le conseil, les services" },
       { title: "Vos droits en tant qu'élu : rémunération, formation, absences" },
       { title: "Vos responsabilités : juridiques, civiles, pénales" },
-      { title: "Les 10 erreurs du nouvel élu — et comment les éviter" },
+      { title: "Les 10 erreurs du nouvel élu - et comment les éviter" },
     ],
     formateur:
       "Juriste spécialiste du droit des collectivités territoriales, ancien directeur général des services.",
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
@@ -338,7 +338,7 @@ export const formations: Formation[] = [
       "Informer, expliquer, convaincre, rassurer : la communication est un levier essentiel du mandat d'élu. Cette formation vous donne les méthodes pour communiquer efficacement.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE — Mon Compte Élu",
+    financement: "Éligible DIFE - Mon Compte Élu",
     tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
     objectifs: [
       "Définir sa stratégie de communication d'élu",
@@ -357,7 +357,7 @@ export const formations: Formation[] = [
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation — Accès sous 7 jours après validation",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
       methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
       evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",

@@ -17,21 +17,21 @@ export default function DifeToutComprendre() {
       title="DIFE élu : qu'est-ce que c'est et comment financer votre formation en 2026 ?"
       photoNote="Capture d'écran stylisée de l'interface Mon Compte Élu ou illustration vectorielle d'un téléphone"
       cta={{
-        label: "Simuler mes droits DIFE — Gratuit",
+        label: "Simuler mes droits DIFE - Gratuit",
         subtitle: "Un conseiller vous rappelle sous 24h",
         href: "/contact",
       }}
     >
       <p>
         Vous avez des droits à la formation que vous ignorez peut-être. Depuis
-        2022, chaque élu local — qu&apos;il soit maire ou simple conseiller,
-        indemnisé ou non — bénéficie chaque année d&apos;un budget de 800 euros pour
+        2022, chaque élu local - qu&apos;il soit maire ou simple conseiller,
+        indemnisé ou non - bénéficie chaque année d&apos;un budget de 800 euros pour
         se former. Ce dispositif s&apos;appelle le DIFE : Droit Individuel à la
         Formation d&apos;Élu.
       </p>
       <p>
         Problème : la majorité des élus ne savent pas qu&apos;ils l&apos;ont, ou ne
-        savent pas comment l&apos;utiliser. Cet article vous explique tout —
+        savent pas comment l&apos;utiliser. Cet article vous explique tout -
         simplement, sans jargon administratif.
       </p>
 
@@ -72,14 +72,14 @@ export default function DifeToutComprendre() {
         professionnelle dans les 6 mois après la fin du mandat.
       </p>
 
-      <h2>Comment accéder à son DIFE — le tutoriel pas à pas</h2>
+      <h2>Comment accéder à son DIFE - le tutoriel pas à pas</h2>
       <p>
         Rendez-vous sur moncompteformation.gouv.fr. Cliquez sur « Mon espace
         Élu » ou « Compte Élu ». Connectez-vous avec votre identité numérique
         La Poste (création gratuite si vous ne l&apos;avez pas). Consultez votre
         solde DIFE et les formations disponibles. Sélectionnez une formation Élu
         Formation et validez votre inscription. La prise en charge est
-        automatique — vous n&apos;avez rien à avancer.
+        automatique - vous n&apos;avez rien à avancer.
       </p>
 
       <h2>Et si je n&apos;ai pas d&apos;identité numérique La Poste ?</h2>
@@ -95,7 +95,7 @@ export default function DifeToutComprendre() {
         Si vous êtes un nouvel élu des élections de mars 2026, nous vous
         recommandons de commencer par la formation « Fondamentaux du mandat
         municipal ». En 4 heures, vous comprendrez votre rôle, vos droits, vos
-        responsabilités — une base solide pour tout le reste.
+        responsabilités - une base solide pour tout le reste.
       </p>
       <p>
         Si vous êtes un élu confirmé, les formations les plus demandées en 2026
@@ -111,7 +111,7 @@ export default function DifeToutComprendre() {
       </p>
       <p>
         Élu Formation vous accompagne gratuitement dans toute la démarche DIFE.
-        Appelez-nous ou remplissez le formulaire — un conseiller vous rappelle
+        Appelez-nous ou remplissez le formulaire - un conseiller vous rappelle
         sous 24h.
       </p>
     </ArticleLayout>

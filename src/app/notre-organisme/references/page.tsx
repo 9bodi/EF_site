@@ -8,7 +8,7 @@ import { STATS } from "@/lib/constants";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Nos références — Communes et élus qui nous font confiance",
+  title: "Nos références - Communes et élus qui nous font confiance",
   description:
     "Plus de 500 élus et 200 collectivités formés depuis 2020. Découvrez les témoignages et les communes partenaires d'Élu Formation.",
 };
@@ -20,7 +20,7 @@ export default function ReferencesPage() {
         <Container>
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
-              Nos références — Ils nous font confiance
+              Nos références - Ils nous font confiance
             </h1>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
               Depuis 2020, Élu Formation accompagne des élus et des collectivités
@@ -71,7 +71,7 @@ export default function ReferencesPage() {
             <div className="max-w-[100px] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src="/img/map2.avif"
-                alt="Carte des DOM-TOM — collectivités partenaires"
+                alt="Carte des DOM-TOM - collectivités partenaires"
                 width={100}
                 height={200}
                 className="w-full h-auto object-contain"

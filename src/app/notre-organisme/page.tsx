@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Award, BookOpen, Users, Shield, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Notre organisme — Élu Formation",
+  title: "Notre organisme - Élu Formation",
   description:
     "Découvrez Élu Formation, organisme agréé par le Ministère de l'Intérieur pour la formation des élus locaux. Notre mission : mieux accompagner ceux qui s'engagent.",
 };
@@ -188,7 +188,7 @@ export default function NotreOrganismePage() {
               {
                 icon: Users,
                 title: "Des formateurs experts",
-                text: "Juristes, financiers, communicants, médiateurs — tous spécialistes de l'action publique locale et pédagogues confirmés.",
+                text: "Juristes, financiers, communicants, médiateurs - tous spécialistes de l'action publique locale et pédagogues confirmés.",
               },
               {
                 icon: Heart,

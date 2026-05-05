@@ -18,11 +18,11 @@ export default function Newsletter() {
     <section className="py-16 md:py-20 bg-navy">
       <Container className="max-w-3xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">
-          Recevez le Guide du Nouvel Élu 2026 — Gratuit
+          Recevez le Guide du Nouvel Élu 2026 - Gratuit
         </h2>
         <p className="mt-4 text-gray-300 text-lg">
           Vos droits à la formation, les dates de sessions, les actualités du
-          mandat — directement dans votre boîte mail.
+          mandat - directement dans votre boîte mail.
         </p>
 
         <form

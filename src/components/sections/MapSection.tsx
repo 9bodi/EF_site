@@ -9,7 +9,7 @@ export default function MapSection() {
       <Container>
         <SectionTitle
           title="Élu Formation intervient dans toute la France"
-          subtitle="+ de 200 collectivités partenaires — Formations 100 % en distanciel ou dans votre commune"
+          subtitle="+ de 200 collectivités partenaires - Formations 100 % en distanciel ou dans votre commune"
         />
 
        {/* Cartes */}
@@ -31,7 +31,7 @@ export default function MapSection() {
 
     <Image
       src="/img/map2.avif"
-      alt="Carte des DOM-TOM — collectivités partenaires"
+      alt="Carte des DOM-TOM - collectivités partenaires"
       width={160}
       height={300}
       className="w-full h-auto object-contain"

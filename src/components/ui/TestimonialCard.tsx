@@ -6,7 +6,7 @@ export default function TestimonialCard({ quote, name, role, commune }: Testimon
       <p className="text-gray-text italic leading-relaxed mb-4">&ldquo;{quote}&rdquo;</p>
       <footer>
         <p className="font-semibold text-navy">{name}</p>
-        <p className="text-sm text-gray-400">{role} — {commune}</p>
+        <p className="text-sm text-gray-400">{role} - {commune}</p>
       </footer>
     </blockquote>
   );

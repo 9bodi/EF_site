@@ -281,7 +281,7 @@ export default function ElearningPage() {
                   href="/contact"
                   variant="outline"
                   size="lg"
-                  subtitle="Réponse sous 24h — Gratuit"
+                  subtitle="Réponse sous 24h - Gratuit"
                   className="border-white/30 text-white hover:bg-white/10 hover:text-white"
                 >
                   Être rappelé par un conseiller
@@ -372,10 +372,10 @@ export default function ElearningPage() {
         </Container>
       </section>
 
-      {/* Programme — Introduction + 11 modules */}
+      {/* Programme - Introduction + 11 modules */}
       <section className="py-16 md:py-24 bg-gray-light">
         <Container>
-          <SectionTitle title="Programme complet — Introduction + 11 modules" />
+          <SectionTitle title="Programme complet - Introduction + 11 modules" />
           <div className="space-y-4 max-w-4xl mx-auto">
             {modules.map((m) => (
               <div
@@ -396,7 +396,7 @@ export default function ElearningPage() {
                   </span>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-navy font-heading">
-                      {m.isIntro ? m.title : `Module ${m.number} — ${m.title}`}
+                      {m.isIntro ? m.title : `Module ${m.number} - ${m.title}`}
                     </h3>
                     <p className="mt-2 text-gray-text leading-relaxed text-sm">
                       {m.description}
@@ -453,7 +453,7 @@ export default function ElearningPage() {
               {
                 icon: Clock,
                 title: "Durée",
-                text: "1 introduction + 11 modules — environ 3 heures au total. Avancez à votre rythme, sans contrainte de date.",
+                text: "1 introduction + 11 modules - environ 3 heures au total. Avancez à votre rythme, sans contrainte de date.",
               },
               {
                 icon: GraduationCap,
@@ -463,7 +463,7 @@ export default function ElearningPage() {
               {
                 icon: Target,
                 title: "Financement",
-                text: "Éligible DIFE — prise en charge à 100 % via Mon Compte Élu. Notre équipe vous accompagne dans les démarches.",
+                text: "Éligible DIFE - prise en charge à 100 % via Mon Compte Élu. Notre équipe vous accompagne dans les démarches.",
               },
             ].map((item) => (
               <div
@@ -490,7 +490,7 @@ export default function ElearningPage() {
               </div>
               <div>
                 <p className="font-medium text-navy mb-1">Prérequis</p>
-                <p>Aucun — formation accessible à tous les niveaux</p>
+                <p>Aucun - formation accessible à tous les niveaux</p>
               </div>
               <div>
                 <p className="font-medium text-navy mb-1">
@@ -520,11 +520,11 @@ export default function ElearningPage() {
             Prêt(e) à maîtriser votre communication d&apos;élu ?
           </h2>
           <p className="text-gray-300 mb-3">
-            Commencez la formation dès aujourd&apos;hui — 11 modules +
+            Commencez la formation dès aujourd&apos;hui - 11 modules +
             introduction, à votre rythme, 100 % en ligne.
           </p>
           <p className="text-rose mb-8">
-            Prise en charge à 100 % via le DIFE — aucun reste à charge dans la
+            Prise en charge à 100 % via le DIFE - aucun reste à charge dans la
             majorité des cas.
           </p>
 
@@ -533,7 +533,7 @@ export default function ElearningPage() {
               href="/contact?formation=e-learning-communication"
               variant="primary"
               size="lg"
-              subtitle="Prise en charge DIFE — Confirmation immédiate"
+              subtitle="Prise en charge DIFE - Confirmation immédiate"
             >
               Je m&apos;inscris à cette formation
             </Button>
@@ -541,7 +541,7 @@ export default function ElearningPage() {
               href="/contact"
               variant="outline"
               size="lg"
-              subtitle="Réponse sous 24h — Gratuit"
+              subtitle="Réponse sous 24h - Gratuit"
               className="border-white/30 text-white hover:bg-white/10 hover:text-white"
             >
               Être rappelé par un conseiller

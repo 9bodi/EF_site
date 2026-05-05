@@ -223,7 +223,7 @@ export default function ContactPage() {
 
             {/* Sidebar contact */}
             <div className="space-y-8">
-              {/* Prendre RDV — mailto */}
+              {/* Prendre RDV - mailto */}
               <div className="bg-gray-light rounded-xl p-6 border border-rose-light">
                 <h3 className="font-bold text-navy text-lg mb-3">
                   Prendre rendez-vous avec un conseiller
@@ -239,7 +239,7 @@ export default function ContactPage() {
                 >
                   <span>Prendre rendez-vous</span>
                   <span className="text-xs font-normal opacity-80 mt-0.5">
-                    15 min — Gratuit — Sans engagement
+                    15 min - Gratuit - Sans engagement
                   </span>
                 </a>
               </div>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                   {[
                     {
                       icon: Phone,
-                      text: `${SITE.phone[0]} — ${SITE.phone[1]}`,
+                      text: `${SITE.phone[0]} - ${SITE.phone[1]}`,
                     },
                     { icon: Mail, text: SITE.email },
                     { icon: MapPin, text: SITE.address },

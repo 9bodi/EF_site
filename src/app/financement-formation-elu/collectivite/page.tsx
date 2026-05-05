@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Financement par la collectivité — Budget formation des élus",
+  title: "Financement par la collectivité - Budget formation des élus",
   description:
     "Votre commune peut financer la formation de ses élus via son budget formation. C'est une dépense obligatoire prévue par le CGCT. Découvrez comment.",
 };
@@ -36,7 +36,7 @@ export default function CollectivitePage() {
         <Container>
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
-              Financement par la collectivité — Le budget formation de votre
+              Financement par la collectivité - Le budget formation de votre
               commune
             </h1>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
@@ -97,7 +97,7 @@ export default function CollectivitePage() {
               {
                 step: "4",
                 title: "Nous envoyons la convention",
-                text: "Élu Formation vous transmet la convention de formation et la facture. La commune règle directement — aucun frais avancé par l'élu.",
+                text: "Élu Formation vous transmet la convention de formation et la facture. La commune règle directement - aucun frais avancé par l'élu.",
               },
             ].map((s) => (
               <div key={s.step} className="flex items-start gap-5">
@@ -144,7 +144,7 @@ export default function CollectivitePage() {
             href="/contact"
             variant="primary"
             size="lg"
-            subtitle="Rappel sous 24h — Gratuit"
+            subtitle="Rappel sous 24h - Gratuit"
           >
             Parler à un conseiller financement
           </Button>

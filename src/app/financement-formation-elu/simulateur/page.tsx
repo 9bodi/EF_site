@@ -38,7 +38,7 @@ function calculerDIFE(anneeElection: number, montantUtilise: number): {
     detail.push("30 mars 2026 : +400 € (1ère année de mandat)");
     detail.push("30 mars 2027 : +400 € → plafond de 800 € atteint");
   } else if (anneeElection === 2020) {
-    // Mandat municipal 2020 — fin de mandat mars 2026
+    // Mandat municipal 2020 - fin de mandat mars 2026
     // 2020: 300€ (conversion heures), 2021: +400€ = 700€ (plafond ancien)
     // 2023: plafond relevé à 800€, +400€ mais plafonné
     // En pratique, un élu 2020 qui n'a rien utilisé est à 800€
@@ -215,7 +215,7 @@ export default function SimulateurPage() {
             <form onSubmit={handleSubmitEmail} className="space-y-8">
               <div className="bg-gray-warm rounded-2xl p-8 border border-gray-200 text-center">
                 <h2 className="text-xl font-bold text-navy font-heading mb-3">
-                  Dernière étape — Recevez votre simulation
+                  Dernière étape - Recevez votre simulation
                 </h2>
                 <p className="text-gray-text mb-6">
                   Entrez votre adresse e-mail pour accéder à votre résultat et
@@ -265,7 +265,7 @@ export default function SimulateurPage() {
                   {resultat.soldeEstime}&nbsp;€
                 </p>
                 <p className="text-gray-300 mt-3">
-                  sur un plafond de 800 € — droits acquis : {resultat.totalAcquis} €
+                  sur un plafond de 800 € - droits acquis : {resultat.totalAcquis} €
                 </p>
               </div>
 

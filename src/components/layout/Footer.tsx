@@ -9,9 +9,9 @@ const footerFormations = [
   { label: "Urbanisme", href: "/formations/urbanisme" },
   { label: "Décentralisation", href: "/formations/decentralisation" },
   { label: "IA pour les élus", href: "/formations/ia-pour-elus" },
-  { label: "Gestion des conflits", href: "/formations/gestion-conflits" },
+  //{ label: "Gestion des conflits", href: "/formations/gestion-conflits" },
   { label: "Communication de l'élu", href: "/formations/communication-elu" },
-  { label: "E-learning : Image & Communication", href: "/e-learning" },
+  { label: "E-learning : Bien gérer son image", href: "/e-learning" },
   { label: "Voir tout le catalogue", href: "/formations" },
 ];
 
@@ -102,14 +102,7 @@ export default function Footer() {
               >
                 LinkedIn
               </a>
-              <a
-                href={SITE.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white text-sm"
-              >
-                Facebook
-              </a>
+              
             </div>
           </div>
         </div>
@@ -118,7 +111,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-            <p>© 2026 Élu Formation — {SITE.legal.entity}</p>
+            <p>© 2026 Élu Formation - {SITE.legal.entity}</p>
             <div className="flex gap-4">
               <Link href="/mentions-legales" className="hover:text-white">
                 Mentions légales

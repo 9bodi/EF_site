@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Mon Compte Élu — Accéder à vos droits DIFE en ligne",
+  title: "Mon Compte Élu - Accéder à vos droits DIFE en ligne",
   description:
     "Tutoriel pas à pas pour accéder à Mon Compte Élu sur moncompteformation.gouv.fr. Créez votre identité numérique et mobilisez vos 800€ de DIFE.",
 };
@@ -34,7 +34,7 @@ const steps = [
   {
     step: "5",
     title: "Inscrivez-vous et validez",
-    text: "Sélectionnez la session qui vous convient, vérifiez le montant pris en charge par votre DIFE, et validez votre inscription. La prise en charge est automatique — vous n'avez rien à avancer.",
+    text: "Sélectionnez la session qui vous convient, vérifiez le montant pris en charge par votre DIFE, et validez votre inscription. La prise en charge est automatique - vous n'avez rien à avancer.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function MonCompteEluPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
-                Mon Compte Élu — Tutoriel pas à pas
+                Mon Compte Élu - Tutoriel pas à pas
               </h1>
               <p className="mt-6 text-lg text-gray-300 leading-relaxed">
                 Mon Compte Élu est le portail officiel qui vous permet de
@@ -62,7 +62,7 @@ export default function MonCompteEluPage() {
               <div className="w-full max-w-xs bg-white rounded-2xl p-8 flex flex-col items-center shadow-2xl">
                 <Image
                   src="/img/dife-logo.png"
-                  alt="DIFE — Mon Compte Élu"
+                  alt="DIFE - Mon Compte Élu"
                   width={250}
                   height={250}
                   className="w-auto h-auto max-h-40 object-contain mb-6"
@@ -70,7 +70,7 @@ export default function MonCompteEluPage() {
                   
                 />
                 <p className="text-4xl font-bold text-navy font-heading">
-                  800&nbsp;€
+                  400&nbsp;€
                 </p>
                 <p className="text-sm text-gray-text mt-2 text-center">
                   par an et par élu, cumulables
@@ -118,7 +118,7 @@ export default function MonCompteEluPage() {
             href="/contact"
             variant="primary"
             size="lg"
-            subtitle="Rappel sous 24h — Gratuit"
+            subtitle="Rappel sous 24h - Gratuit"
           >
             Me faire accompagner par un conseiller
           </Button>

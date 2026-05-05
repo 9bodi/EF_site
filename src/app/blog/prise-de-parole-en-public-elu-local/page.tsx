@@ -18,25 +18,25 @@ export default function PriseDeParoleArticle() {
       photoNote="Élu(e) en train de prendre la parole devant une assemblée, ambiance authentique, salle des fêtes ou conseil municipal"
       cta={{
         label: "Découvrir la formation Prise de parole en public",
-        subtitle: "Prochaines dates disponibles — Éligible DIFE",
+        subtitle: "Prochaines dates disponibles - Éligible DIFE",
         href: "/formations/prise-de-parole",
       }}
     >
       <p>
         « Le trac, j&apos;en souffre à chaque séance. » C&apos;est ce que confient
         beaucoup d&apos;élus locaux, en privé. La prise de parole en public est
-        l&apos;une des dimensions les plus exigeantes du mandat électif — et l&apos;une
+        l&apos;une des dimensions les plus exigeantes du mandat électif - et l&apos;une
         des moins bien préparées. On forme rarement les élus à parler. Pourtant,
         c&apos;est par la parole que vous convainquez, rassurez, fédérez, et incarnez
         votre mandat.
       </p>
       <p>
-        Voici les techniques essentielles pour progresser — et comment les
+        Voici les techniques essentielles pour progresser - et comment les
         acquérir durablement.
       </p>
 
       <h2>
-        1. Comprendre pourquoi le trac est normal — et comment le domestiquer
+        1. Comprendre pourquoi le trac est normal - et comment le domestiquer
       </h2>
       <p>
         Le trac n&apos;est pas un signe de faiblesse. C&apos;est une réponse
@@ -58,8 +58,8 @@ export default function PriseDeParoleArticle() {
         faisons (situation actuelle), ce que nous allons faire (perspectives).
       </p>
       <p>
-        Appliquez cette structure à n&apos;importe quel discours — discours de vœux,
-        prise de position au conseil, allocution d&apos;inauguration — et votre
+        Appliquez cette structure à n&apos;importe quel discours - discours de vœux,
+        prise de position au conseil, allocution d&apos;inauguration - et votre
         message sera toujours clair, même si votre voix tremble.
       </p>
 
@@ -71,13 +71,13 @@ export default function PriseDeParoleArticle() {
         débit), faites des pauses (un silence de 2 secondes après une phrase
         forte est plus puissant que de continuer), variez le volume (montez sur
         les points importants, descendez pour créer de l&apos;intimité), et
-        articulez — ouvrez la bouche.
+        articulez - ouvrez la bouche.
       </p>
 
       <h2>4. Le regard : connecter avec votre auditoire</h2>
       <p>
         Regarder ses notes en permanence coupe le lien avec l&apos;assemblée.
-        L&apos;objectif n&apos;est pas de ne jamais regarder son papier — c&apos;est de lever
+        L&apos;objectif n&apos;est pas de ne jamais regarder son papier - c&apos;est de lever
         les yeux régulièrement pour ancrer des moments de connexion.
       </p>
       <p>
@@ -99,7 +99,7 @@ export default function PriseDeParoleArticle() {
         Notre formation « Prise de parole en public pour élus locaux » est
         conçue exactement pour ça : 4 heures en visioconférence, un groupe de 8
         à 10 élus, des exercices pratiques, et un formateur coach qui vous
-        accompagne en direct. Éligible DIFE — aucun reste à charge dans la
+        accompagne en direct. Éligible DIFE - aucun reste à charge dans la
         majorité des cas.
       </p>
 

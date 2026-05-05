@@ -24,7 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-scroll-behavior="smooth">
+
       <body className="font-body text-gray-text bg-white antialiased">
         <Header />
         <main className="pt-16 md:pt-20">{children}</main>

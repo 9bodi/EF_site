@@ -30,13 +30,13 @@ export default function OrganismePreview() {
               <p>
                 Élu Formation est né en 2020 d&apos;un constat simple : les élus
                 locaux manquent d&apos;outils de formation vraiment adaptés à leurs
-                contraintes — le temps disponible, les sujets prioritaires, et
+                contraintes - le temps disponible, les sujets prioritaires, et
                 la spécificité du mandat électif.
               </p>
               <p>
                 Nous avons construit une méthode : des formations courtes (4h),
                 100&nbsp;% orientées pratique, animées par des formateurs issus du
-                monde de l&apos;action publique locale — anciens élus, directeurs de
+                monde de l&apos;action publique locale - anciens élus, directeurs de
                 collectivités, experts juridiques et financiers.
               </p>
               <p className="font-medium text-navy">

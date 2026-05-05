@@ -1,6 +1,7 @@
 ﻿import { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -93,11 +94,15 @@ export default function ServicesPage() {
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="w-full aspect-[4/3] rounded-2xl bg-gray-warm border border-gray-200 flex items-center justify-center">
-                <p className="text-gray-400 text-sm text-center px-8">
-                  [ Photo : poignée de main élu/conseiller, ton sécurisant ]
-                </p>
+            <div className="hidden lg:block">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/img/assurance.png"
+                  alt="Conseil en assurance pour élu local"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -108,11 +113,15 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24 bg-gray-warm" id="recrutement">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="hidden lg:flex items-center justify-center order-first lg:order-first">
-              <div className="w-full aspect-[4/3] rounded-2xl bg-white border border-gray-200 flex items-center justify-center">
-                <p className="text-gray-400 text-sm text-center px-8">
-                  [ Photo : entretien professionnel en bureau de mairie ]
-                </p>
+            <div className="hidden lg:block order-first">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/img/recrutement.png"
+                  alt="Recrutement de cadres territoriaux"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div>
@@ -180,17 +189,21 @@ export default function ServicesPage() {
                 <Button
                   href="/contact"
                   variant="primary"
-                  subtitle="Entretien exploratoire offert — 30 minutes"
+                  subtitle="Entretien exploratoire offert - 30 minutes"
                 >
                   Décrire mon besoin de conseil
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="w-full aspect-[4/3] rounded-2xl bg-gray-warm border border-gray-200 flex items-center justify-center">
-                <p className="text-gray-400 text-sm text-center px-8">
-                  [ Photo : consultant en réunion, tableau blanc, post-its ]
-                </p>
+            <div className="hidden lg:block">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/img/conseil.png"
+                  alt="Conseil en gestion publique locale"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -199,4 +212,3 @@ export default function ServicesPage() {
     </>
   );
 }
-

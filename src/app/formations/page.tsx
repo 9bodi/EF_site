@@ -9,7 +9,7 @@ import { formations } from "@/data/formations";
 import { Clock, Monitor, Play } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Formations élus locaux — Éligible DIFE",
+  title: "Formations élus locaux - Éligible DIFE",
   description:
     "Catalogue complet des formations pour élus locaux : prise de parole, budget, urbanisme, IA, communication... Distanciel et e-learning. Financé par votre DIFE. Inscriptions ouvertes.",
 };
@@ -21,7 +21,7 @@ export default function FormationsPage() {
       <section className="bg-navy text-white py-16 md:py-20">
         <Container>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight max-w-4xl">
-            Nos formations pour élus locaux — Votre prochaine session est prête.
+            Nos formations pour élus locaux - Votre prochaine session est prête.
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
             Formations en visioconférence avec un groupe d&apos;élus ou parcours
@@ -131,7 +131,7 @@ export default function FormationsPage() {
               href="/contact"
               variant="primary"
               size="lg"
-              subtitle="Rappel sous 24h — Gratuit"
+              subtitle="Rappel sous 24h - Gratuit"
             >
               Parler à un conseiller formation
             </Button>

@@ -18,7 +18,7 @@ export default function GuideNouvelElu() {
       photoNote="Photo : nouveau maire ou adjoint qui prend ses marques, lit un document officiel, ambiance premier jour"
       cta={{
         label: "Découvrir la formation Fondamentaux du mandat",
-        subtitle: "100 % financé par votre DIFE — 4h en visioconférence",
+        subtitle: "100 % financé par votre DIFE - 4h en visioconférence",
         href: "/formations/fondamentaux-mandat",
       }}
     >
@@ -31,7 +31,7 @@ export default function GuideNouvelElu() {
       <p>
         Mais par où commencer ? Quels sont vos droits ? Vos obligations ? Qui
         peut vous aider ? Ce guide a été écrit pour les nouveaux élus qui
-        veulent démarrer leur mandat du bon pied — sans perdre de temps en
+        veulent démarrer leur mandat du bon pied - sans perdre de temps en
         questions sans réponses.
       </p>
 
@@ -91,28 +91,28 @@ export default function GuideNouvelElu() {
         des subventions.
       </p>
       <p>
-        Ce n&apos;est pas pour vous faire peur — c&apos;est pour vous inciter à vous
+        Ce n&apos;est pas pour vous faire peur - c&apos;est pour vous inciter à vous
         former et à poser les bonnes questions avant de voter.
       </p>
 
       <h2>4. Comprendre le fonctionnement de la commune</h2>
       <p>
         La commune est organisée en deux sphères qui ne se confondent pas. La
-        sphère politique — le conseil municipal (vous), le maire, les adjoints —
-        délibère, vote et décide. La sphère administrative — les agents
-        communaux (secrétaire de mairie, DGS, services techniques) — exécute et
+        sphère politique - le conseil municipal (vous), le maire, les adjoints -
+        délibère, vote et décide. La sphère administrative - les agents
+        communaux (secrétaire de mairie, DGS, services techniques) - exécute et
         conseille.
       </p>
       <p>
         Un élu efficace sait se positionner dans l&apos;une et comprendre l&apos;autre.
-        Ne cherchez pas à « faire le travail des agents » — concentrez-vous sur
+        Ne cherchez pas à « faire le travail des agents » - concentrez-vous sur
         la prise de décision et le contrôle.
       </p>
 
       <h2>5. Vos droits à la formation : le DIFE expliqué en 2 minutes</h2>
       <p>
         Parmi tous vos droits, le DIFE (Droit Individuel à la Formation d&apos;Élu)
-        est celui dont vous entendrez le plus parler — et que vous devriez
+        est celui dont vous entendrez le plus parler - et que vous devriez
         utiliser en priorité.
       </p>
       <p>
@@ -134,8 +134,7 @@ export default function GuideNouvelElu() {
         budget communal (savoir lire, comprendre et voter un budget), la prise
         de parole (vous allez parler en public très souvent), la communication
         locale (tenir vos administrés informés est un droit et une obligation
-        démocratique), la gestion des conflits (avec des riverains, des
-        associations, ou au sein du conseil — ça arrive toujours), et le droit
+        démocratique) et le droit
         des collectivités (connaître vos droits et vos limites vous protège).
       </p>
 
@@ -149,7 +148,7 @@ export default function GuideNouvelElu() {
       <p>
         Élu Formation vous accompagne depuis les premières semaines de votre
         mandat jusqu&apos;à son terme. Découvrez notre formation « Fondamentaux du
-        mandat municipal » — conçue spécialement pour les nouveaux élus des
+        mandat municipal » - conçue spécialement pour les nouveaux élus des
         élections de mars 2026.
       </p>
     </ArticleLayout>
