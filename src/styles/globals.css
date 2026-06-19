@@ -115,21 +115,29 @@
 }
 
 @theme {
-  --color-navy: #221B6D;
-  --color-navy-light: #373B94;
-  --color-red: #A50634;
-  --color-red-hover: #8a052c;
+  --color-navy: #1a2744;
+  --color-navy-light: #243259;
+  --color-navy-dark: #111d36;
+  --color-blue: #2563b8;
+  --color-blue-light: #6b9de8;
+  --color-blue-pale: #E6F1FB;
+  --color-red: #c8365a;
+  --color-red-hover: #a82d4c;
   --color-rose: #D36C6C;
   --color-rose-light: #e8a3a3;
   --color-gray-light: #F2F2F2;
+  --color-gray-warm: #f7f8fa;
   --color-gray-text: #4a4a4a;
+  --color-gray-50: #f7f8fa;
   --color-white: #ffffff;
 
-  --color-primary: #A50634;
-  --color-primary-hover: #8a052c;
-  --color-secondary: #221B6D;
-  --color-accent: #D36C6C;
-  --color-green-dife: #2a9d5c;
+  --color-primary: #c8365a;
+  --color-primary-hover: #a82d4c;
+  --color-secondary: #1a2744;
+  --color-accent: #2563b8;
+  --color-green-dife: #1D9E75;
+  --color-teal: #1D9E75;
+  --color-teal-pale: #E1F5EE;
 
   --font-heading: "Uni Neue", system-ui, sans-serif;
   --font-body: "Uni Neue", system-ui, sans-serif;
@@ -144,7 +152,6 @@ html {
   outline-offset: 2px;
 }
 
-/* Taille de base augmentée */
 html {
   font-size: 18px;
 }

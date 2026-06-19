@@ -3,15 +3,14 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
-import Card from "@/components/ui/Card";
 import FormationCard from "@/components/formations/FormationCard";
 import { formations } from "@/data/formations";
-import { Clock, Monitor, Play } from "lucide-react";
+import { Clock, Monitor, Play, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Formations élus locaux - Éligible DIFE",
   description:
-    "Catalogue complet des formations pour élus locaux : prise de parole, budget, urbanisme, IA, communication... Distanciel et e-learning. Financé par votre DIFE. Inscriptions ouvertes.",
+    "Des formations à votre rythme, pour réussir votre mandat d'élu local. Courtes, concrètes, 100 % à distance. En groupe ou en autonomie.",
 };
 
 export default function FormationsPage() {
@@ -21,33 +20,61 @@ export default function FormationsPage() {
       <section className="bg-navy text-white py-16 md:py-20">
         <Container>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight max-w-4xl">
-            Nos formations pour élus locaux - Votre prochaine session est prête.
+            Des formations à votre rythme, pour réussir votre mandat d&apos;élu local
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
-            Formations en visioconférence avec un groupe d&apos;élus ou parcours
-            e-learning en autonomie. Courtes, concrètes, animées par des
-            experts : elles s&apos;adaptent au temps disponible d&apos;un élu.
-            Financement DIFE pris en charge par nos conseillers.
+            Développez vos compétences, gagnez en confiance dans vos décisions et disposez
+            d&apos;outils concrets pour agir au quotidien dans votre collectivité.
           </p>
+          <p className="mt-3 text-gray-400 max-w-3xl leading-relaxed">
+            Courtes, concrètes, 100 % à distance. En groupe ou en autonomie, nos formations
+            s&apos;inscrivent dans votre agenda d&apos;élu. De la prise de parole au budget municipal,
+            nos formations vous accompagnent à chaque étape de votre mandat.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Button href="/contact" variant="primary" size="lg">
+              Échanger avec un conseiller Élu Formation
+            </Button>
+            <Button
+              href="#formations"
+              variant="outline"
+              size="lg"
+              className="border-white/30 text-white hover:bg-white/10 hover:text-white"
+            >
+              M&apos;inscrire à une prochaine session
+            </Button>
+          </div>
         </Container>
       </section>
 
-      {/* Filtres placeholder */}
-      <section className="bg-white border-b border-gray-200">
-        <Container className="py-4">
-          <div className="flex flex-wrap gap-3 items-center text-sm text-gray-text">
-            <span className="font-medium text-navy">Filtrer :</span>
-            <select className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm">
-              <option>Toutes les thématiques</option>
-              {formations.map((f) => (
-                <option key={f.slug}>{f.title}</option>
-              ))}
-            </select>
-            <select className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm">
-              <option>Tous les formats</option>
-              <option>Distanciel / présentiel</option>
-              <option>E-learning</option>
-            </select>
+      {/* Bloc financement */}
+      <section className="py-10 bg-white border-b border-gray-200">
+        <Container className="max-w-3xl">
+          <div className="bg-gray-warm rounded-xl p-6 border border-gray-200">
+            <h2 className="text-lg font-bold text-navy mb-3">
+              Votre formation d&apos;élu peut être prise en charge
+            </h2>
+            <p className="text-sm text-gray-text leading-relaxed mb-4">
+              Se former fait partie de l&apos;exercice du mandat. Chaque élu dispose de droits
+              dédiés à la formation pour développer ses compétences au service de sa collectivité.
+              Selon votre situation, plusieurs solutions de financement existent :
+            </p>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-start gap-2 text-sm text-gray-text">
+                <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
+                Le budget formation obligatoire prévu par votre collectivité
+              </div>
+              <div className="flex items-start gap-2 text-sm text-gray-text">
+                <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
+                Votre Droit Individuel à la Formation des Élus (DIFE)
+              </div>
+            </div>
+            <p className="text-sm text-gray-text mb-4">
+              Notre équipe vous accompagne dans le choix du financement adapté et dans vos démarches d&apos;inscription.
+            </p>
+            <Button href="/contact" variant="outline" size="sm">
+              Être accompagné dans mon inscription
+            </Button>
           </div>
         </Container>
       </section>
@@ -64,7 +91,7 @@ export default function FormationsPage() {
                     <Badge variant="highlight">E-learning</Badge>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold font-heading group-hover:text-rose transition-colors">
-                    Bien gérer son image et sa communication d&apos;élu(e) local(e)
+                    Bien gérer son image et sa communication d&apos;élu
                   </h2>
                   <p className="mt-3 text-gray-300 leading-relaxed">
                     Formation complète en e-learning : 11 modules + introduction.
@@ -73,16 +100,13 @@ export default function FormationsPage() {
                   </p>
                   <div className="flex items-center gap-4 mt-4 text-sm text-gray-400">
                     <span className="flex items-center gap-1">
-                      <Monitor className="w-4 h-4" />
-                      100% en ligne
+                      <Monitor className="w-4 h-4" /> 100% en ligne
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      ~3h au total
+                      <Clock className="w-4 h-4" /> ~3h au total
                     </span>
                     <span className="flex items-center gap-1">
-                      <Play className="w-4 h-4" />
-                      11 modules + intro
+                      <Play className="w-4 h-4" /> 11 modules + intro
                     </span>
                   </div>
                 </div>
@@ -102,8 +126,8 @@ export default function FormationsPage() {
         </Container>
       </section>
 
-      {/* Grille formations classiques */}
-      <section className="py-16 md:py-24 bg-gray-light">
+      {/* Grille formations */}
+      <section id="formations" className="py-16 md:py-24 bg-gray-light">
         <Container>
           <h2 className="text-2xl font-bold text-navy font-heading mb-8">
             Formations en visioconférence
@@ -127,12 +151,7 @@ export default function FormationsPage() {
             ou pour l&apos;ensemble de votre équipe municipale.
           </p>
           <div className="mt-6">
-            <Button
-              href="/contact"
-              variant="primary"
-              size="lg"
-              subtitle="Rappel sous 24h - Gratuit"
-            >
+            <Button href="/contact" variant="primary" size="lg">
               Parler à un conseiller formation
             </Button>
           </div>

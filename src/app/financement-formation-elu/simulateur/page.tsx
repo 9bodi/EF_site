@@ -6,20 +6,20 @@ import Button from "@/components/ui/Button";
 import { Euro, Calendar, Info, CheckCircle, ArrowRight } from "lucide-react";
 
 const mandatOptions = [
-  { label: "Conseiller·ère municipal·e", value: "municipal" },
+  { label: "Conseiller(ère) municipal(e)", value: "municipal" },
   { label: "Maire", value: "maire" },
-  { label: "Adjoint·e au maire", value: "adjoint" },
-  { label: "Conseiller·ère départemental·e", value: "departemental" },
-  { label: "Conseiller·ère régional·e", value: "regional" },
+  { label: "Adjoint(e) au maire", value: "adjoint" },
+  { label: "Conseiller(ère) départemental(e)", value: "departemental" },
+  { label: "Conseiller(ère) régional(e)", value: "regional" },
 ];
 
-const anneeElectionOptions = [
-  { label: "Mars 2026 (nouveau mandat)", value: 2026 },
-  { label: "Mars 2020 (mandat en cours)", value: 2020 },
-  { label: "Juin 2021 (départementales / régionales)", value: 2021 },
+const electionOptions = [
+  { label: "Élu(e) en mars 2026", value: "elu-2026" },
+  { label: "Réélu(e) en mars 2026", value: "reelu-2026" },
+  { label: "Non réélu(e)", value: "non-reelu" },
 ];
 
-function calculerDIFE(anneeElection: number, montantUtilise: number): {
+function calculerDIFE(election: string, montantUtilise: number): {
   totalAcquis: number;
   soldeEstime: number;
   anneeProchainCredit: number;
@@ -27,41 +27,32 @@ function calculerDIFE(anneeElection: number, montantUtilise: number): {
 } {
   const plafond = 800;
   const creditAnnuel = 400;
-  const anneeActuelle = 2026;
   const detail: string[] = [];
 
   let totalAcquis = 0;
 
-  if (anneeElection === 2026) {
-    // Nouveau mandat 2026
-    totalAcquis = creditAnnuel; // Premier crédit au 30 mars 2026
+  if (election === "elu-2026") {
+    totalAcquis = creditAnnuel;
     detail.push("30 mars 2026 : +400 € (1ère année de mandat)");
     detail.push("30 mars 2027 : +400 € → plafond de 800 € atteint");
-  } else if (anneeElection === 2020) {
-    // Mandat municipal 2020 - fin de mandat mars 2026
-    // 2020: 300€ (conversion heures), 2021: +400€ = 700€ (plafond ancien)
-    // 2023: plafond relevé à 800€, +400€ mais plafonné
-    // En pratique, un élu 2020 qui n'a rien utilisé est à 800€
+  } else if (election === "reelu-2026") {
     totalAcquis = plafond;
     detail.push("Mandat 2020-2026 : droits accumulés jusqu'au plafond de 800 €");
-    detail.push("Attention : si vous avez été réélu en 2026, vos droits non utilisés sont conservés");
-    detail.push("Les droits restent utilisables jusqu'à 6 mois après la fin du mandat précédent");
-  } else if (anneeElection === 2021) {
-    // Départementales/régionales 2021
-    // 2021: 400€, 2022: +300€ = 700€ (ancien plafond), 2023: plafond à 800€ → +100€
-    // 2024: +400€ mais plafonné à 800€
+    detail.push("Réélu(e) en 2026 : vos droits non utilisés sont conservés");
+    detail.push("Nouveau crédit de 400 € au 30 mars 2026 (plafonné à 800 €)");
+  } else if (election === "non-reelu") {
     totalAcquis = plafond;
-    detail.push("Mandat depuis 2021 : droits accumulés jusqu'au plafond de 800 €");
-    detail.push("Alimentation chaque année au 5 juillet (date anniversaire)");
+    detail.push("Vos droits acquis pendant le mandat précédent restent disponibles");
+    detail.push("Vous pouvez les utiliser jusqu'à 6 mois après la fin de votre mandat");
+    detail.push("Passé ce délai, les droits non utilisés sont perdus");
   }
 
   const soldeEstime = Math.min(totalAcquis - montantUtilise, plafond);
-  const anneeProchainCredit = anneeElection === 2026 ? 2027 : anneeActuelle + 1;
 
   return {
     totalAcquis: Math.min(totalAcquis, plafond),
     soldeEstime: Math.max(soldeEstime, 0),
-    anneeProchainCredit,
+    anneeProchainCredit: election === "elu-2026" ? 2027 : 2027,
     detail,
   };
 }
@@ -69,7 +60,7 @@ function calculerDIFE(anneeElection: number, montantUtilise: number): {
 export default function SimulateurPage() {
   const [step, setStep] = useState<"form" | "email" | "result">("form");
   const [mandat, setMandat] = useState("");
-  const [anneeElection, setAnneeElection] = useState<number>(2026);
+  const [election, setElection] = useState("elu-2026");
   const [montantUtilise, setMontantUtilise] = useState<number>(0);
   const [email, setEmail] = useState("");
   const [resultat, setResultat] = useState<ReturnType<typeof calculerDIFE> | null>(null);
@@ -81,36 +72,34 @@ export default function SimulateurPage() {
   };
 
   const handleSubmitEmail = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!email) return;
+    e.preventDefault();
+    if (!email) return;
 
-  const result = calculerDIFE(anneeElection, montantUtilise);
-  setResultat(result);
-  setStep("result");
+    const result = calculerDIFE(election, montantUtilise);
+    setResultat(result);
+    setStep("result");
 
-  // Envoi du mail via eTarget
-  try {
-    await fetch("/api/simulateur", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email,
-        mandat: mandatOptions.find((o) => o.value === mandat)?.label || mandat,
-        soldeEstime: result.soldeEstime,
-        totalAcquis: result.totalAcquis,
-        detail: result.detail,
-      }),
-    });
-  } catch (err) {
-    console.error("Erreur envoi email:", err);
-  }
-};
-
+    try {
+      await fetch("/api/simulateur", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          mandat: mandatOptions.find((o) => o.value === mandat)?.label || mandat,
+          soldeEstime: result.soldeEstime,
+          totalAcquis: result.totalAcquis,
+          detail: result.detail,
+        }),
+      });
+    } catch (err) {
+      console.error("Erreur envoi email:", err);
+    }
+  };
 
   const reset = () => {
     setStep("form");
     setMandat("");
-    setAnneeElection(2026);
+    setElection("elu-2026");
     setMontantUtilise(0);
     setEmail("");
     setResultat(null);
@@ -164,14 +153,14 @@ export default function SimulateurPage() {
 
                   <div>
                     <label className="block text-sm font-semibold text-navy mb-2">
-                      Date de votre élection
+                      Votre élection
                     </label>
                     <select
-                      value={anneeElection}
-                      onChange={(e) => setAnneeElection(Number(e.target.value))}
+                      value={election}
+                      onChange={(e) => setElection(e.target.value)}
                       className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     >
-                      {anneeElectionOptions.map((o) => (
+                      {electionOptions.map((o) => (
                         <option key={o.value} value={o.value}>{o.label}</option>
                       ))}
                     </select>
@@ -312,7 +301,7 @@ export default function SimulateurPage() {
                   )}
                   <div className="flex items-start gap-2 text-sm text-gray-text">
                     <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
-                    Le e-learning &quot;Bien gérer son image et sa communication d&apos;élu local&quot; (~3h)
+                    Le e-learning &quot;Bien gérer son image et sa communication&quot; (~3h)
                   </div>
                 </div>
               </div>
@@ -320,16 +309,15 @@ export default function SimulateurPage() {
               {/* CTA */}
               <div className="text-center space-y-4">
                 <Button
-                  href="/contact"
+                  href="/formations"
                   variant="primary"
                   size="lg"
-                  subtitle="Un conseiller vous rappelle sous 24h"
                 >
-                  Être accompagné pour utiliser mes droits
+                  Choisir une formation
                 </Button>
                 <div className="flex justify-center gap-6">
-                  <Button href="/formations" variant="outline" size="sm">
-                    Voir les formations
+                  <Button href="/contact" variant="outline" size="sm">
+                    Être rappelé par un conseiller
                   </Button>
                   <button
                     onClick={reset}

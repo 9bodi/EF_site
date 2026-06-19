@@ -9,22 +9,18 @@ const footerFormations = [
   { label: "Urbanisme", href: "/formations/urbanisme" },
   { label: "Décentralisation", href: "/formations/decentralisation" },
   { label: "IA pour les élus", href: "/formations/ia-pour-elus" },
-  //{ label: "Gestion des conflits", href: "/formations/gestion-conflits" },
   { label: "Communication de l'élu", href: "/formations/communication-elu" },
-  { label: "E-learning : Bien gérer son image", href: "/e-learning" },
+  { label: "Fondamentaux du mandat", href: "/formations/fondamentaux-mandat" },
+  { label: "E-learning : Image & Communication", href: "/e-learning" },
   { label: "Voir tout le catalogue", href: "/formations" },
 ];
 
-
-
-const footerServices = [
-  { label: "Formations pour ma commune", href: "/formations-pour-ma-commune" },
-  { label: "Assurance élu", href: "/services/assurance-elu" },
-  { label: "Recrutement", href: "/services/recrutement" },
-  { label: "Conseil", href: "/services/conseil" },
-  { label: "Financement DIFE", href: "/financement-formation-elu" },
+const footerLinks = [
+  { label: "Séminaire intra-collectivité", href: "/formations-pour-ma-commune" },
+  { label: "Financer ma formation", href: "/financement-formation-elu" },
+  { label: "Simuler mes droits DIFE", href: "/financement-formation-elu/simulateur" },
   { label: "Notre organisme", href: "/notre-organisme" },
-  { label: "Blog & Ressources", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -32,6 +28,7 @@ export default function Footer() {
     <footer className="bg-navy text-white">
       <Container className="py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Col 1 - Marque */}
           <div>
             <Image
               src="/img/LOGO_ELU-FORMATION_BLANC100.png"
@@ -50,15 +47,13 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Col 2 - Formations */}
           <div>
-            <h3 className="text-lg font-bold font-heading mb-4">Formations</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Formations</h3>
             <ul className="space-y-2">
               {footerFormations.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -66,15 +61,13 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Col 3 - Liens utiles */}
           <div>
-            <h3 className="text-lg font-bold font-heading mb-4">Services</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Liens utiles</h3>
             <ul className="space-y-2">
-              {footerServices.map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="text-sm text-gray-300 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -82,14 +75,12 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Col 4 - Certifications */}
           <div>
-            <h3 className="text-lg font-bold font-heading mb-4">
-              Certifications
-            </h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Certifications</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Agréé Ministère de l&apos;Intérieur</li>
-              <li>Certifié Qualiopi</li>
-              <li>DIFE éligible</li>
+              <li>Éligible DIFE</li>
               <li>Formation continue ({SITE.legal.naf})</li>
               <li>N° déclaration : {SITE.legal.qualiopi}</li>
             </ul>
@@ -102,7 +93,6 @@ export default function Footer() {
               >
                 LinkedIn
               </a>
-              
             </div>
           </div>
         </div>
@@ -111,17 +101,11 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-            <p>© 2026 Élu Formation - {SITE.legal.entity}</p>
+            <p>© 2026 Élu Formation - Place de la République SAS</p>
             <div className="flex gap-4">
-              <Link href="/mentions-legales" className="hover:text-white">
-                Mentions légales
-              </Link>
-              <Link href="/cgv" className="hover:text-white">
-                CGV
-              </Link>
-              <Link href="/confidentialite" className="hover:text-white">
-                Politique de confidentialité
-              </Link>
+              <Link href="/mentions-legales" className="hover:text-white">Mentions légales</Link>
+              <Link href="/cgv" className="hover:text-white">CGV</Link>
+              <Link href="/confidentialite" className="hover:text-white">Politique de confidentialité</Link>
             </div>
           </div>
         </Container>
@@ -129,4 +113,3 @@ export default function Footer() {
     </footer>
   );
 }
-
