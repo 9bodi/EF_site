@@ -62,52 +62,57 @@ export default function NotreOrganismePage() {
             Les mots de l&apos;équipe dirigeante
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Alexandre */}
-            <div className="bg-gray-warm rounded-2xl overflow-hidden border border-gray-200">
-              <div className="relative aspect-[4/3] bg-gray-200">
-                <Image
-                  src="/img/AHA.jpg"
-                  alt="Alexandre Huau-Armani"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="p-6">
-                <blockquote className="text-gray-text leading-relaxed italic mb-4">
-                  &laquo; J&apos;ai créé Élu Formation avec une conviction : les élus locaux méritent
-                  d&apos;être accompagnés à la hauteur de leur engagement. Un mandat demande de
-                  maîtriser des sujets nombreux, parfois complexes, avec peu de temps pour se
-                  former. Notre rôle est de leur apporter des connaissances utiles et des outils
-                  pratiques pour agir efficacement au service de leur territoire. &raquo;
-                </blockquote>
-                <p className="font-bold text-navy">Alexandre Huau-Armani</p>
-                <p className="text-sm text-gray-text">Fondateur et président, ancien maire adjoint</p>
-              </div>
-            </div>
+         <div className="grid md:grid-cols-2 gap-10">
+  {/* Alexandre */}
+  <div className="bg-gray-warm rounded-2xl border border-gray-200 p-6">
+    <div className="flex items-start gap-5">
+      <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0">
+        <Image
+          src="/img/AHA.jpg"
+          alt="Alexandre Huau-Armani"
+          fill
+          className="object-cover object-top"
+        />
+      </div>
+      <div>
+        <p className="font-bold text-navy">Alexandre Huau-Armani</p>
+        <p className="text-sm text-gray-text mb-3">Fondateur et président, ancien maire adjoint</p>
+      </div>
+    </div>
+    <blockquote className="text-gray-text leading-relaxed italic mt-4">
+      &laquo; J&apos;ai créé Élu Formation avec une conviction : les élus locaux méritent
+      d&apos;être accompagnés à la hauteur de leur engagement. Un mandat demande de
+      maîtriser des sujets nombreux, parfois complexes, avec peu de temps pour se
+      former. Notre rôle est de leur apporter des connaissances utiles et des outils
+      pratiques pour agir efficacement au service de leur territoire. &raquo;
+    </blockquote>
+  </div>
 
-            {/* Mickaël */}
-            <div className="bg-gray-warm rounded-2xl overflow-hidden border border-gray-200">
-              <div className="relative aspect-[4/3] bg-gray-200">
-                <Image
-                  src="/img/MV.jpg"
-                  alt="Mickaël Vaillant"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="p-6">
-                <blockquote className="text-gray-text leading-relaxed italic mb-4">
-                  &laquo; Une formation réussie doit partir de la réalité vécue par les élus.
-                  Nous construisons nos programmes avec des intervenants issus du terrain afin
-                  que chaque participant reparte avec des réponses concrètes, adaptées à son
-                  mandat et à sa collectivité. &raquo;
-                </blockquote>
-                <p className="font-bold text-navy">Mickaël Vaillant</p>
-                <p className="text-sm text-gray-text">Responsable de formation, enseignant à Sciences Po</p>
-              </div>
-            </div>
-          </div>
+  {/* Mickaël */}
+  <div className="bg-gray-warm rounded-2xl border border-gray-200 p-6">
+    <div className="flex items-start gap-5">
+      <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0">
+        <Image
+          src="/img/MV.jpg"
+          alt="Mickaël Vaillant"
+          fill
+          className="object-cover object-top"
+        />
+      </div>
+      <div>
+        <p className="font-bold text-navy">Mickaël Vaillant</p>
+        <p className="text-sm text-gray-text mb-3">Responsable de formation, enseignant à Sciences Po</p>
+      </div>
+    </div>
+    <blockquote className="text-gray-text leading-relaxed italic mt-4">
+      &laquo; Une formation réussie doit partir de la réalité vécue par les élus.
+      Nous construisons nos programmes avec des intervenants issus du terrain afin
+      que chaque participant reparte avec des réponses concrètes, adaptées à son
+      mandat et à sa collectivité. &raquo;
+    </blockquote>
+  </div>
+</div>
+
         </Container>
       </section>
 
