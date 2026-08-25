@@ -326,7 +326,7 @@ export const formations: Formation[] = [
   },
   {
     slug: "reseaux-sociaux",
-    image: "/img/formations/reseaux-sociaux.png",
+    image: "/img/formations/photo-RS.png",
     title: "Réseaux sociaux : maîtriser les fondamentaux pour communiquer et interagir avec ses citoyens",
     shortTitle: "Réseaux sociaux",
     h1: "Réseaux sociaux : maîtriser les fondamentaux pour communiquer et interagir avec ses citoyens",
