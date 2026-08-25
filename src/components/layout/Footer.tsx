@@ -10,6 +10,7 @@ const footerFormations = [
   { label: "Décentralisation", href: "/formations/decentralisation" },
   { label: "IA pour les élus", href: "/formations/ia-pour-elus" },
   { label: "Communication de l'élu", href: "/formations/communication-elu" },
+  { label: "Réseaux sociaux", href: "/formations/reseaux-sociaux" },
   { label: "Fondamentaux du mandat", href: "/formations/fondamentaux-mandat" },
   { label: "E-learning : Image & Communication", href: "/e-learning" },
   { label: "Voir tout le catalogue", href: "/formations" },

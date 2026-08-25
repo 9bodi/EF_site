@@ -24,7 +24,7 @@ export default function MentionsLegales() {
               RCS Evreux<br />
               N° TVA intracommunautaire : FR54892385949<br />
               Email : contact@eluformation.fr<br />
-              Téléphone : 01 76 36 12 56
+              Téléphone : 07 69 69 49 94
             </p>
           </div>
 

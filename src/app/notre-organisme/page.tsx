@@ -101,7 +101,7 @@ export default function NotreOrganismePage() {
       </div>
       <div>
         <p className="font-bold text-navy">Mickaël Vaillant</p>
-        <p className="text-sm text-gray-text mb-3">Responsable de formation, enseignant à Sciences Po</p>
+        <p className="text-sm text-gray-text mb-3">Responsable de formation, enseignant dans le supérieur</p>
       </div>
     </div>
     <blockquote className="text-gray-text leading-relaxed italic mt-4">

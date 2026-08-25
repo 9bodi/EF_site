@@ -246,45 +246,6 @@ export const formations: Formation[] = [
       accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
     },
   },
-  /*{
-    slug: "gestion-conflits",
-    image: "/img/formations/gestion-conflits.png",
-    title: "Gestion des conflits",
-    shortTitle: "Gestion des conflits",
-    h1: "Formation gestion des conflits pour élus - Faire face aux tensions dans votre commune",
-    metaTitle:
-      "Formation gestion des conflits pour élus - Faire face aux tensions dans votre commune | Élu Formation",
-    metaDescription:
-      "Riverains en colère, tensions au sein du conseil, relations difficiles avec des agents ou des associations... Formation éligible DIFE.",
-    accroche:
-      "Riverains en colère, tensions au sein du conseil, relations difficiles avec des agents ou des associations... La gestion des conflits est l'une des compétences les plus demandées - et les moins formées - des élus locaux.",
-    format: "Distanciel ou présentiel",
-    duree: "4h + 1h en tutorat",
-    financement: "Éligible DIFE - Mon Compte Élu",
-    tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
-    objectifs: [
-      "Comprendre les mécanismes du conflit et ses étapes",
-      "Adopter une posture de médiateur sans perdre son autorité",
-      "Désamorcer une tension avant qu'elle ne devienne une crise",
-      "Gérer les situations de tensions avec les administrés en réunions publiques",
-    ],
-    programme: [
-      { title: "Anatomie du conflit - pourquoi ça explose et comment l'anticiper" },
-      { title: "Les outils de la communication non-violente pour l'élu" },
-      { title: "Mises en situation : réunion publique houleuse, conflit au conseil" },
-      { title: "Construire sa propre boîte à outils anti-conflit" },
-    ],
-    formateur:
-      "Médiateur professionnel certifié et formateur en gestion de crise, ancien secrétaire général de mairie.",
-    infos: {
-      public: "Élus locaux",
-      prerequis: "Aucun",
-      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
-      methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
-      evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
-      accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
-    },
-  },*/
   {
     slug: "fondamentaux-mandat",
     image: "/img/formations/fondamentaux-mandat.png",
@@ -354,6 +315,47 @@ export const formations: Formation[] = [
     ],
     formateur:
       "Consultant en communication publique, ancien directeur de la communication d'une collectivité territoriale.",
+    infos: {
+      public: "Élus locaux",
+      prerequis: "Aucun",
+      modalites: "Inscription via Élu Formation - Accès sous 7 jours après validation",
+      methodes: ["Cas concrets", "Mises en situation", "Échanges entre pairs", "Supports fournis"],
+      evaluation: ["Quiz", "Mise en situation", "Attestation de formation"],
+      accessibilite: "Formation accessible aux personnes en situation de handicap (adaptations possibles)",
+    },
+  },
+  {
+    slug: "reseaux-sociaux",
+    image: "/img/formations/reseaux-sociaux.png",
+    title: "Réseaux sociaux : maîtriser les fondamentaux pour communiquer et interagir avec ses citoyens",
+    shortTitle: "Réseaux sociaux",
+    h1: "Réseaux sociaux : maîtriser les fondamentaux pour communiquer et interagir avec ses citoyens",
+    metaTitle:
+      "Formation réseaux sociaux pour élus locaux - Communiquer avec ses citoyens | Élu Formation",
+    metaDescription:
+      "Identifiez les réseaux sociaux pertinents, comprenez les codes de chaque plateforme et définissez une stratégie de communication citoyenne adaptée à votre mandat. Éligible DIFE.",
+    accroche:
+      "Identifiez les réseaux sociaux les plus adaptés à votre mandat, comprenez les codes de chaque plateforme et initiez une stratégie de communication citoyenne multicanale.",
+    pourquoi:
+      "Les réseaux sociaux sont devenus un canal incontournable pour informer, échanger et mobiliser vos administrés. Cette formation vous donne les clés pour les utiliser efficacement et sereinement.",
+    format: "Distanciel ou présentiel",
+    duree: "4h + 1h en tutorat",
+    financement: "Éligible DIFE - Mon Compte Élu",
+    tarif: "Prise en charge à 100 % via le DIFE ou la collectivité",
+    objectifs: [
+      "Identifier les réseaux sociaux existants et choisir les plus pertinents selon vos objectifs et votre public",
+      "Comprendre les codes, formats et bonnes pratiques propres à chaque réseau",
+      "Appréhender les enjeux de visibilité, d'engagement et de communication citoyenne",
+      "Initier une stratégie multicanale adaptée : objectifs, cible, indicateurs",
+      "Mettre en pratique sur des cas concrets liés au mandat d'élu",
+    ],
+    programme: [
+      { title: "Maîtriser les réseaux sociaux et leurs usages au service du mandat" },
+      { title: "Connaître le fonctionnement des plateformes pour mieux servir votre communication et vos administrés" },
+      { title: "Définir une stratégie de communication adaptée à son mandat" },
+    ],
+    formateur:
+      "Consultant en communication digitale, spécialiste des réseaux sociaux des collectivités et des élus locaux.",
     infos: {
       public: "Élus locaux",
       prerequis: "Aucun",

@@ -84,7 +84,7 @@ export default function Header() {
                 className="flex items-center gap-2 text-sm text-navy hover:text-blue transition-colors px-3 py-2"
               >
                 <Phone className="w-4 h-4 text-blue" />
-                01 76 36 12 56
+                07 69 69 49 94
               </a>
 
               <div className="w-px h-5 bg-gray-200" />
