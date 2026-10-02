@@ -5,10 +5,11 @@ import Image from "next/image";
 import { Award, BookOpen, Users, Shield, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Notre organisme - Élu Formation",
+  title: "Notre organisme | Agréé Ministère de l'Intérieur",
   description:
     "Découvrez Élu Formation, organisme agréé par le Ministère de l'Intérieur pour la formation des élus locaux. Depuis 2020, des centaines d'élus accompagnés partout en France.",
 };
+
 
 export default function NotreOrganismePage() {
   return (

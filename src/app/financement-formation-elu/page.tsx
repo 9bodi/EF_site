@@ -5,10 +5,11 @@ import Image from "next/image";
 import { CheckCircle, HelpCircle, CreditCard, Building2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Financer ma formation d'élu",
+  title: "Financer ma formation d'élu | DIFE & collectivité",
   description:
     "Votre formation peut être prise en charge. Mon Compte Élu ou financement collectivité : découvrez les solutions et laissez-vous accompagner.",
 };
+
 
 const stepsCompteElu = [
   {

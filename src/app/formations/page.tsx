@@ -8,10 +8,11 @@ import { formations } from "@/data/formations";
 import { Clock, Monitor, Play, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Formations élus locaux - Éligible DIFE",
+  title: "Nos formations pour élus locaux | Visio & présentiel",
   description:
-    "Des formations à votre rythme, pour réussir votre mandat d'élu local. Courtes, concrètes, 100 % à distance. En groupe ou en autonomie.",
+    "Des formations à votre rythme, pour réussir votre mandat d'élu local. Prise de parole, budget, urbanisme, IA, réseaux sociaux. Éligibles DIFE.",
 };
+
 
 export default function FormationsPage() {
   return (
