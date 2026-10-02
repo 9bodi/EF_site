@@ -12,6 +12,26 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "dife-2026-montant-calcul-mode-emploi",
+    title:
+      "DIFE 2026 : nouveaux montants, calcul et mode d'emploi pour les élus locaux",
+    excerpt:
+      "Réforme décembre 2026 : 600 € par an, plafond 1 200 €. Tout savoir sur les nouveaux montants, le calcul selon votre situation et les démarches.",
+    category: "Financement",
+    date: "Octobre 2026",
+    readTime: "8 min",
+  },
+  {
+    slug: "reseaux-sociaux-elus-par-ou-commencer",
+    title:
+      "Réseaux sociaux pour élus locaux : par où commencer ?",
+    excerpt:
+      "Facebook, Instagram, LinkedIn, X… Quel réseau choisir quand on est élu local ? Guide pratique pour se lancer sans faux pas.",
+    category: "Compétences",
+    date: "Septembre 2026",
+    readTime: "6 min",
+  },
+  {
     slug: "guide-nouvel-elu-2026",
     title:
       "Nouvel élu municipal en 2026 : tout ce que vous devez savoir pour démarrer votre mandat",
@@ -26,7 +46,7 @@ const articles = [
     title:
       "DIFE élu : qu'est-ce que c'est et comment financer votre formation en 2026 ?",
     excerpt:
-      "Le DIFE vous donne 800 euros de budget formation. Découvrez comment l'utiliser pas à pas pour financer votre prochaine formation d'élu local.",
+      "Jusqu'à 600 € par an de budget formation. Découvrez comment utiliser votre DIFE pas à pas pour financer votre prochaine formation d'élu local.",
     category: "Financement",
     date: "Avril 2026",
     readTime: "6 min",
@@ -63,13 +83,7 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
               <Link key={article.slug} href={`/blog/${article.slug}`}>
-                <Card className="h-full flex flex-col hover:shadow-lg transition-shadow group">
-                  <div className="aspect-[16/9] rounded-lg bg-white border border-gray-200 mb-4 flex items-center justify-center group-hover:bg-gray-light transition-colors">
-                    <p className="text-gray-400 text-xs text-center px-4">
-                      [ Visuel article ]
-                    </p>
-                  </div>
-
+                <Card className="h-full flex flex-col hover:shadow-lg transition-shadow group p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <Badge variant="info">{article.category}</Badge>
                     <span className="text-xs text-gray-text">
@@ -97,4 +111,3 @@ export default function BlogPage() {
     </>
   );
 }
-

@@ -20,6 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/guide-nouvel-elu-2026",
     "/blog/dife-elu-tout-comprendre-financer-formation",
     "/blog/prise-de-parole-en-public-elu-local",
+        "/blog/dife-2026-montant-calcul-mode-emploi",
+    "/blog/reseaux-sociaux-elus-par-ou-commencer",
+
   ];
 
   const formationPages = formations.map((f) => `/formations/${f.slug}`);
