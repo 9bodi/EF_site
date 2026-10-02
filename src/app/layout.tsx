@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/img/LOGO_ELU-FORMATION_favicon.png",
   },
+  verification: {
+    google: "Yr9F5IzhSfgcMml1XSo_xHAL2MshOXOX3B3pc5IIzdc",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="fr" data-scroll-behavior="smooth">
       <head>
-                <Script
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NXMLSY8WND"
           strategy="afterInteractive"
         />
@@ -38,7 +41,6 @@ export default function RootLayout({
             gtag('config', 'G-NXMLSY8WND');
           `}
         </Script>
-
       </head>
       <body className="font-body text-gray-text bg-white antialiased">
         <Header />
