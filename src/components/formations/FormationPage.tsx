@@ -8,9 +8,53 @@ import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 import { CheckCircle } from "lucide-react";
 
+function getCourseSchema(formation: Formation) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: formation.title,
+    description: formation.metaDescription,
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "Élu Formation",
+      url: "https://eluformation.fr",
+    },
+    educationalLevel: "Tous niveaux",
+    audience: {
+      "@type": "Audience",
+      audienceType: "Élus locaux",
+    },
+    inLanguage: "fr",
+    courseMode: formation.format.includes("Distanciel") ? "Online" : "Onsite",
+    duration: formation.duree,
+    offers: {
+      "@type": "Offer",
+      category: "Éligible DIFE",
+      priceCurrency: "EUR",
+      price: "0",
+      description: formation.tarif,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: formation.format.includes("Distanciel") ? "Online" : "Onsite",
+      instructor: {
+        "@type": "Person",
+        description: formation.formateur,
+      },
+    },
+  };
+}
+
 export default function FormationPage({ formation }: { formation: Formation }) {
+  const courseSchema = getCourseSchema(formation);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+
       <FormationHeader formation={formation} />
 
       {/* Double CTA après le hero */}

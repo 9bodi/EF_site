@@ -21,6 +21,29 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Élu Formation",
+  legalName: "Place de la République SAS",
+  url: "https://eluformation.fr",
+  logo: "https://eluformation.fr/img/LOGO_ELU-FORMATION_RVB.png",
+  description:
+    "Organisme de formation agréé par le Ministère de l'Intérieur, spécialisé dans la formation des élus locaux.",
+  telephone: "+33769694994",
+  email: "contact@eluformation.fr",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1 Avenue Victor Hugo",
+    addressLocality: "Vernon",
+    postalCode: "27200",
+    addressCountry: "FR",
+  },
+  sameAs: ["https://linkedin.com/company/eluformation"],
+  foundingDate: "2020",
+  taxID: "FR54892385949",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,6 +64,10 @@ export default function RootLayout({
             gtag('config', 'G-NXMLSY8WND');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className="font-body text-gray-text bg-white antialiased">
         <Header />
