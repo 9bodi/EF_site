@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "@/styles/globals.css";
@@ -12,10 +13,9 @@ export const metadata: Metadata = {
     "Organisme de formation agréé, spécialisé dans la formation des élus locaux. Formations en ligne et intra-collectivité. Financé jusqu'à 100% par votre DIFE.",
   metadataBase: new URL("https://eluformation.fr"),
   icons: {
-  icon: "/favicon.ico",
-  apple: "/img/LOGO_ELU-FORMATION_favicon.png",
-},
-
+    icon: "/favicon.ico",
+    apple: "/img/LOGO_ELU-FORMATION_favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +25,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" data-scroll-behavior="smooth">
-
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EZ85XQJLDQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EZ85XQJLDQ');
+          `}
+        </Script>
+      </head>
       <body className="font-body text-gray-text bg-white antialiased">
         <Header />
         <main className="pt-16 md:pt-20">{children}</main>
-
         <Footer />
       </body>
     </html>
