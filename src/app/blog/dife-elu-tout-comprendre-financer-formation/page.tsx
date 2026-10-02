@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "DIFE élu : qu'est-ce que c'est et comment financer votre formation en 2026 ?",
   description:
-    "Le DIFE (Droit Individuel à la Formation d'Élu) vous donne 800 euros de budget formation. Découvrez comment l'utiliser pas à pas.",
+    "Le DIFE (Droit Individuel à la Formation d'Élu) vous donne jusqu'à 400 € par an (plafond 800 €). Découvrez comment l'utiliser pas à pas.",
 };
 
 export default function DifeToutComprendre() {
@@ -25,9 +25,9 @@ export default function DifeToutComprendre() {
       <p>
         Vous avez des droits à la formation que vous ignorez peut-être. Depuis
         2022, chaque élu local - qu&apos;il soit maire ou simple conseiller,
-        indemnisé ou non - bénéficie chaque année d&apos;un budget de 800 euros pour
-        se former. Ce dispositif s&apos;appelle le DIFE : Droit Individuel à la
-        Formation d&apos;Élu.
+        indemnisé ou non - bénéficie chaque année d&apos;un crédit de 400 € pour
+        se former, dans la limite d&apos;un plafond de 800 €. Ce dispositif
+        s&apos;appelle le DIFE : Droit Individuel à la Formation d&apos;Élu.
       </p>
       <p>
         Problème : la majorité des élus ne savent pas qu&apos;ils l&apos;ont, ou ne
@@ -42,11 +42,12 @@ export default function DifeToutComprendre() {
         locale et à la proximité de l&apos;action publique.
       </p>
       <p>
-        Concrètement : chaque année de mandat, 800 euros sont crédités sur votre
-        compte formation personnel. Ces fonds sont gérés par la Caisse des
-        Dépôts et Consignations (CDC) et ne proviennent PAS du budget de votre
-        commune. Ils sont financés par une cotisation versée par les communes sur
-        les indemnités de leurs élus.
+        Concrètement : chaque année de mandat, 400 € sont crédités sur votre
+        compte formation personnel, dans la limite d&apos;un plafond cumulé de
+        800 €. Ces fonds sont gérés par la Caisse des Dépôts et Consignations
+        (CDC) et ne proviennent PAS du budget de votre commune. Ils sont
+        financés par une cotisation versée par les communes sur les indemnités
+        de leurs élus.
       </p>
       <p>
         Même si vous n&apos;êtes pas indemnisé (situation fréquente dans les petites
@@ -90,6 +91,19 @@ export default function DifeToutComprendre() {
         guider par téléphone lors de votre premier contact.
       </p>
 
+      <h2>Combien ai-je sur mon compte DIFE ?</h2>
+      <p>
+        Si vous avez été élu(e) en mars 2026, votre premier crédit de 400 € a
+        été versé à l&apos;ouverture de votre mandat. Vous atteindrez le plafond de
+        800 € dès la deuxième année. Si vous avez été réélu(e), vos droits non
+        utilisés lors du mandat précédent ont été conservés (dans la limite du
+        plafond de 800 €) et un nouveau crédit de 400 € s&apos;y est ajouté.
+      </p>
+      <p>
+        Pour connaître votre solde exact, connectez-vous à Mon Compte Élu ou
+        utilisez notre simulateur gratuit.
+      </p>
+
       <h2>Quelle formation choisir en priorité en 2026 ?</h2>
       <p>
         Si vous êtes un nouvel élu des élections de mars 2026, nous vous
@@ -100,21 +114,32 @@ export default function DifeToutComprendre() {
       <p>
         Si vous êtes un élu confirmé, les formations les plus demandées en 2026
         sont la prise de parole, le budget municipal, et l&apos;IA pour les élus.
+        Vous pouvez aussi suivre notre formation e-learning « Bien gérer son
+        image et sa communication » — 11 modules à votre rythme, 100 % en ligne.
+      </p>
+
+            <h2>Mise à jour : réforme DIFE au 1er décembre 2026</h2>
+      <p>
+        Depuis la publication de cet article, l&apos;arrêté du 28 août 2026 a
+        modifié les montants du DIFE. À compter du 1er décembre 2026, le crédit
+        annuel passe de 400 € à 600 €, et le plafond de 800 € à 1 200 €.
+        Consultez notre article dédié pour tous les détails de la réforme.
       </p>
 
       <h2>Conclusion</h2>
       <p>
         Le DIFE est l&apos;un de vos droits les plus concrets et les moins utilisés.
         En 2025, seulement un élu sur quatre avait mobilisé ses droits DIFE. En
-        2026, avec l&apos;ouverture des nouvelles élections, c&apos;est le moment idéal
-        pour découvrir ce dispositif et investir dans votre formation.
+        2026, avec le renouvellement des conseils municipaux et la revalorisation
+        des montants, c&apos;est le moment idéal pour découvrir ce dispositif et
+        investir dans votre formation.
       </p>
       <p>
-        Élu Formation vous accompagne gratuitement dans toute la démarche DIFE.
+        Élu Formation vous accompagne dans toute la démarche DIFE.
         Appelez-nous ou remplissez le formulaire - un conseiller vous rappelle
         sous 24h.
       </p>
+
     </ArticleLayout>
   );
 }
-

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
-import { Euro, Calendar, Info, CheckCircle, ArrowRight } from "lucide-react";
+import { Euro, Calendar, Info, CheckCircle, ArrowRight, AlertTriangle } from "lucide-react";
 
 const mandatOptions = [
   { label: "Conseiller(ère) municipal(e)", value: "municipal" },
@@ -25,34 +25,39 @@ function calculerDIFE(election: string, montantUtilise: number): {
   anneeProchainCredit: number;
   detail: string[];
 } {
-  const plafond = 800;
-  const creditAnnuel = 400;
+  const ancienCredit = 400;
+  const complement2026 = 200;
+  const nouveauCredit = 600;
+  const nouveauPlafond = 1200;
   const detail: string[] = [];
 
   let totalAcquis = 0;
 
   if (election === "elu-2026") {
-    totalAcquis = creditAnnuel;
-    detail.push("30 mars 2026 : +400 € (1ère année de mandat)");
-    detail.push("30 mars 2027 : +400 € → plafond de 800 € atteint");
+    totalAcquis = ancienCredit + complement2026;
+    detail.push("Mars 2026 : +400 € (crédit initial, ancien barème)");
+    detail.push("Décembre 2026 : +200 € (complément réforme → total 600 € pour 2026)");
+    detail.push("Mars 2027 : +600 € → solde estimé 1 200 € (nouveau plafond)");
   } else if (election === "reelu-2026") {
-    totalAcquis = plafond;
-    detail.push("Mandat 2020-2026 : droits accumulés jusqu'au plafond de 800 €");
-    detail.push("Réélu(e) en 2026 : vos droits non utilisés sont conservés");
-    detail.push("Nouveau crédit de 400 € au 30 mars 2026 (plafonné à 800 €)");
+    totalAcquis = nouveauPlafond;
+    detail.push("Mandat 2020-2026 : droits accumulés conservés (ancien plafond 800 €)");
+    detail.push("Mars 2026 : +400 € (crédit initial)");
+    detail.push("Décembre 2026 : +200 € (complément réforme)");
+    detail.push("Nouveau plafond applicable : 1 200 € (au lieu de 800 €)");
+    detail.push("Vos droits non utilisés sont conservés et cumulables jusqu'au nouveau plafond");
   } else if (election === "non-reelu") {
-    totalAcquis = plafond;
-    detail.push("Vos droits acquis pendant le mandat précédent restent disponibles");
+    totalAcquis = 800;
+    detail.push("Vos droits acquis pendant le mandat précédent restent disponibles (plafond 800 €)");
     detail.push("Vous pouvez les utiliser jusqu'à 6 mois après la fin de votre mandat");
     detail.push("Passé ce délai, les droits non utilisés sont perdus");
   }
 
-  const soldeEstime = Math.min(totalAcquis - montantUtilise, plafond);
+  const soldeEstime = Math.min(totalAcquis - montantUtilise, election === "non-reelu" ? 800 : nouveauPlafond);
 
   return {
-    totalAcquis: Math.min(totalAcquis, plafond),
+    totalAcquis: Math.min(totalAcquis, election === "non-reelu" ? 800 : nouveauPlafond),
     soldeEstime: Math.max(soldeEstime, 0),
-    anneeProchainCredit: election === "elu-2026" ? 2027 : 2027,
+    anneeProchainCredit: election === "non-reelu" ? 0 : 2027,
     detail,
   };
 }
@@ -117,6 +122,16 @@ export default function SimulateurPage() {
             Estimez le montant de vos droits à la formation d&apos;élu (DIFE)
             en répondant à 3 questions simples. Résultat immédiat.
           </p>
+          <div className="mt-6 bg-white/10 border border-white/20 rounded-xl p-4 text-left">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-yellow-400 shrink-0 mt-0.5" />
+              <p className="text-sm text-gray-300">
+                <strong className="text-white">Réforme DIFE — décembre 2026 :</strong> les droits
+                passent de 400 € à 600 €/an (plafond de 800 € à 1 200 €). Cette simulation
+                intègre les nouveaux montants.
+              </p>
+            </div>
+          </div>
         </Container>
       </section>
 
@@ -173,7 +188,7 @@ export default function SimulateurPage() {
                     <input
                       type="number"
                       min={0}
-                      max={800}
+                      max={1200}
                       step={10}
                       value={montantUtilise}
                       onChange={(e) => setMontantUtilise(Number(e.target.value))}
@@ -254,9 +269,23 @@ export default function SimulateurPage() {
                   {resultat.soldeEstime}&nbsp;€
                 </p>
                 <p className="text-gray-300 mt-3">
-                  sur un plafond de 800 € - droits acquis : {resultat.totalAcquis} €
+                  sur un plafond de {election === "non-reelu" ? "800" : "1 200"} € - droits acquis : {resultat.totalAcquis} €
                 </p>
               </div>
+
+              {/* Bandeau réforme */}
+              {election !== "non-reelu" && (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                    <p className="text-sm text-gray-700">
+                      <strong>Réforme décembre 2026 :</strong> cette simulation intègre les
+                      nouveaux montants (600 €/an, plafond 1 200 €). Le complément de 200 €
+                      pour 2026 est inclus sous réserve de confirmation par la Caisse des Dépôts.
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Détail */}
               <div className="bg-gray-warm rounded-2xl p-8 border border-gray-200">
@@ -281,19 +310,19 @@ export default function SimulateurPage() {
                   Avec {resultat.soldeEstime} € vous pouvez financer
                 </h3>
                 <div className="space-y-3">
-                  {resultat.soldeEstime >= 400 && (
+                  {resultat.soldeEstime >= 600 && (
                     <div className="flex items-start gap-2 text-sm text-gray-text">
                       <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
                       Au moins 1 formation en visioconférence (4h + 1h tutorat)
                     </div>
                   )}
-                  {resultat.soldeEstime >= 800 && (
+                  {resultat.soldeEstime >= 1200 && (
                     <div className="flex items-start gap-2 text-sm text-gray-text">
                       <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
                       2 formations ou 1 formation + le e-learning Image & Communication
                     </div>
                   )}
-                  {resultat.soldeEstime > 0 && resultat.soldeEstime < 400 && (
+                  {resultat.soldeEstime > 0 && resultat.soldeEstime < 600 && (
                     <div className="flex items-start gap-2 text-sm text-gray-text">
                       <CheckCircle className="w-4 h-4 text-green-dife shrink-0 mt-0.5" />
                       Un complément peut être pris en charge par votre collectivité
@@ -331,8 +360,8 @@ export default function SimulateurPage() {
               {/* Disclaimer */}
               <p className="text-xs text-gray-400 text-center leading-relaxed">
                 Cette simulation est une estimation basée sur les règles en vigueur
-                (400 €/an, plafond 800 €). Le montant exact de vos droits est
-                consultable sur{" "}
+                et l&apos;arrêté du 28 août 2026 (600 €/an, plafond 1 200 €).
+                Le montant exact de vos droits est consultable sur{" "}
                 <a
                   href="https://www.moncompteformation.gouv.fr/espace-public/mon-compte-elu-0"
                   target="_blank"
@@ -341,8 +370,9 @@ export default function SimulateurPage() {
                 >
                   Mon Compte Élu
                 </a>
-                . Élu Formation ne peut être tenu responsable d&apos;un écart entre
-                l&apos;estimation et le solde réel.
+                . Le complément de 200 € pour 2026 est soumis à confirmation par la
+                Caisse des Dépôts. Élu Formation ne peut être tenu responsable
+                d&apos;un écart entre l&apos;estimation et le solde réel.
               </p>
             </div>
           )}

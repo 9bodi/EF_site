@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cgv",
     "/mentions-legales",
     "/confidentialite",
+    "/blog",
+    "/blog/guide-nouvel-elu-2026",
+    "/blog/dife-elu-tout-comprendre-financer-formation",
+    "/blog/prise-de-parole-en-public-elu-local",
   ];
 
   const formationPages = formations.map((f) => `/formations/${f.slug}`);
@@ -26,6 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.startsWith("/formations/") || path === "/e-learning" ? 0.8 : 0.6,
+    priority: path === "" ? 1 : path.startsWith("/formations/") || path === "/e-learning" ? 0.8 : path.startsWith("/blog") ? 0.7 : 0.6,
   }));
 }

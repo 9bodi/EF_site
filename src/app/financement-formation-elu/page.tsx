@@ -86,12 +86,14 @@ export default function FinancementPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
               Financer ma formation d&apos;élu
             </h1>
-            <p className="mt-6 text-lg text-gray-300 leading-relaxed">
+                        <p className="mt-6 text-lg text-gray-300 leading-relaxed">
               Vous souhaitez suivre une formation mais vous ne savez pas comment
               financer votre inscription ? En tant qu&apos;élu local, vous disposez
               de solutions dédiées pour développer vos compétences tout au long
-              de votre mandat.
+              de votre mandat. A partir de décembre 2026, vos droits DIFE s&apos;élèvent
+              à 600 € par an (plafond 1 200 €).
             </p>
+
             <div className="mt-8 bg-white/10 border border-white/20 rounded-xl p-6">
               <p className="text-white font-semibold mb-3">Votre formation peut être financée :</p>
               <div className="space-y-3">
