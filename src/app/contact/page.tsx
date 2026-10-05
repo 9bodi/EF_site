@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Container from "@/components/layout/Container";
-import Button from "@/components/ui/Button";
 import { SITE } from "@/lib/constants";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 
 const roles = [
   "Maire",
@@ -37,12 +36,35 @@ export default function ContactPage() {
     rgpd: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Contact form:", formData);
-    alert(
-      "Merci ! Votre demande a bien été envoyée. Nous vous recontactons sous 24h."
-    );
+    if (!formData.rgpd) return;
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSent(true);
+      } else {
+        alert(
+          "Une erreur est survenue. Veuillez réessayer ou nous appeler directement."
+        );
+      }
+    } catch {
+      alert(
+        "Une erreur est survenue. Veuillez réessayer ou nous appeler directement."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -86,139 +108,153 @@ export default function ContactPage() {
                 Nous vous répondons sous 24h ouvrées.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
+              {sent ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                  <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                  <p className="text-xl font-bold text-green-800 mb-2">
+                    Demande envoyée !
+                  </p>
+                  <p className="text-green-700">
+                    Merci {formData.prenom}, nous vous recontactons sous 24h
+                    ouvrées.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Prénom *
+                      </label>
+                      <input
+                        type="text"
+                        name="prenom"
+                        required
+                        value={formData.prenom}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Nom *
+                      </label>
+                      <input
+                        type="text"
+                        name="nom"
+                        required
+                        value={formData.nom}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Téléphone
+                      </label>
+                      <input
+                        type="tel"
+                        name="telephone"
+                        value={formData.telephone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Vous êtes
+                      </label>
+                      <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none bg-white"
+                      >
+                        <option value="">Sélectionnez</option>
+                        {roles.map((r) => (
+                          <option key={r} value={r}>
+                            {r}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-navy mb-1">
+                        Votre demande
+                      </label>
+                      <select
+                        name="demande"
+                        value={formData.demande}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none bg-white"
+                      >
+                        <option value="">Sélectionnez</option>
+                        {demandes.map((d) => (
+                          <option key={d} value={d}>
+                            {d}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-sm font-medium text-navy mb-1">
-                      Prénom *
+                      Votre message
                     </label>
+                    <textarea
+                      name="message"
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none resize-y"
+                    />
+                  </div>
+
+                  <div className="flex items-start gap-2">
                     <input
-                      type="text"
-                      name="prenom"
+                      type="checkbox"
+                      name="rgpd"
                       required
-                      value={formData.prenom}
+                      checked={formData.rgpd}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
+                      className="mt-1 accent-red"
                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
-                      Nom *
+                    <label className="text-xs text-gray-text">
+                      J&apos;accepte que mes données soient traitées par Élu
+                      Formation dans le cadre de ma demande. Vos données restent
+                      confidentielles et ne seront jamais revendues.
                     </label>
-                    <input
-                      type="text"
-                      name="nom"
-                      required
-                      value={formData.nom}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
-                    />
                   </div>
-                </div>
 
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      name="telephone"
-                      value={formData.telephone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
-                      Vous êtes
-                    </label>
-                    <select
-                      name="role"
-                      value={formData.role}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none bg-white"
-                    >
-                      <option value="">Sélectionnez</option>
-                      {roles.map((r) => (
-                        <option key={r} value={r}>
-                          {r}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
-                      Votre demande
-                    </label>
-                    <select
-                      name="demande"
-                      value={formData.demande}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none bg-white"
-                    >
-                      <option value="">Sélectionnez</option>
-                      {demandes.map((d) => (
-                        <option key={d} value={d}>
-                          {d}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-navy mb-1">
-                    Votre message
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-red focus:border-red outline-none resize-y"
-                  />
-                </div>
-
-                <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    name="rgpd"
-                    required
-                    checked={formData.rgpd}
-                    onChange={handleChange}
-                    className="mt-1 accent-red"
-                  />
-                  <label className="text-xs text-gray-text">
-                    J&apos;accepte que mes données soient traitées par Élu
-                    Formation dans le cadre de ma demande. Vos données restent
-                    confidentielles et ne seront jamais revendues.
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-8 py-4 rounded-lg bg-red text-white font-semibold hover:bg-red-hover transition-colors cursor-pointer text-lg"
-                >
-                  Envoyer ma demande
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    disabled={!formData.rgpd || loading}
+                    className="w-full sm:w-auto px-8 py-4 rounded-lg bg-red text-white font-semibold hover:bg-red-hover transition-colors cursor-pointer text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {loading ? "Envoi en cours..." : "Envoyer ma demande"}
+                  </button>
+                </form>
+              )}
             </div>
 
             {/* Sidebar contact */}
