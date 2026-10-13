@@ -52,6 +52,12 @@ export default function RootLayout({
   return (
     <html lang="fr" data-scroll-behavior="smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
+      <body className="font-body text-gray-text bg-white antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NXMLSY8WND"
           strategy="afterInteractive"
@@ -64,12 +70,6 @@ export default function RootLayout({
             gtag('config', 'G-NXMLSY8WND');
           `}
         </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-      </head>
-      <body className="font-body text-gray-text bg-white antialiased">
         <Header />
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
