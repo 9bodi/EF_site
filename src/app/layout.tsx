@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from "next";
-import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "@/styles/globals.css";
@@ -53,23 +52,27 @@ export default function RootLayout({
     <html lang="fr" data-scroll-behavior="smooth">
       <head>
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NXMLSY8WND"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NXMLSY8WND');
+            `,
+          }}
+        />
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
       </head>
       <body className="font-body text-gray-text bg-white antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NXMLSY8WND"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NXMLSY8WND');
-          `}
-        </Script>
         <Header />
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
