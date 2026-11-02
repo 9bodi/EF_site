@@ -23,11 +23,11 @@ export default function Hero() {
 
             <p className="mt-4 text-base md:text-lg text-gray-300 leading-relaxed">
 
-              Prise de parole, budget municipal, communication, développement
-              local... Maîtriser votre mandat, c&apos;est servir vos concitoyens plus
-              efficacement. Élu Formation vous accompagne avec des formations
-              conçues pour les élus, animées par des experts de l&apos;action publique
-              locale - et finançables jusqu&apos;à 100&nbsp;% par votre DIFE élu.
+              Élu Formation est un organisme de formation des élus locaux agréé
+              par le ministère de l&apos;Intérieur. Prise de parole, budget municipal,
+              communication, développement local... Nos formations sont conçues pour
+              les élus, animées par des experts de l&apos;action publique locale - et
+              finançables jusqu&apos;à 100&nbsp;% par votre DIFE élu.
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-4">

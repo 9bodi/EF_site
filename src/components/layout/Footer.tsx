@@ -39,7 +39,7 @@ export default function Footer() {
               className="h-10 w-auto mb-4"
             />
             <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              Organisme de formation des élus agréé par l&apos;État depuis 2020.
+              Organisme de formation des élus locaux agréé par le ministère de l&apos;Intérieur.
             </p>
             <div className="text-sm text-gray-300 space-y-1">
               <p>{SITE.address}</p>
