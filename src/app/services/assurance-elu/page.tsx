@@ -98,7 +98,7 @@ export default function ServicesPage() {
             <div className="hidden lg:block">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/img/assurance.png"
+                  src="/img/assurance.jpg"
                   alt="Conseil en assurance pour élu local"
                   width={800}
                   height={600}
@@ -117,7 +117,7 @@ export default function ServicesPage() {
             <div className="hidden lg:block order-first">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/img/recrutement.png"
+                  src="/img/recrutement.jpg"
                   alt="Recrutement de cadres territoriaux"
                   width={800}
                   height={600}
@@ -199,7 +199,7 @@ export default function ServicesPage() {
             <div className="hidden lg:block">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/img/conseil.png"
+                  src="/img/conseil.jpg"
                   alt="Conseil en gestion publique locale"
                   width={800}
                   height={600}

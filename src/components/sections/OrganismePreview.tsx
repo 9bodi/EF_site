@@ -10,7 +10,7 @@ export default function OrganismePreview() {
           {/* Photo équipe */}
           <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/img/organisme-preview.png"
+              src="/img/organisme-preview.jpg"
               alt="L'équipe Élu Formation"
               width={800}
               height={600}

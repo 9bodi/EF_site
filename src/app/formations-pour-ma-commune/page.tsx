@@ -122,7 +122,7 @@ export default function FormationsCommunePage() {
             <div className="hidden lg:block">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/img/seminaire.png"
+                  src="/img/seminaire.jpg"
                   alt="Séminaire intra-collectivité pour élus municipaux"
                   width={800}
                   height={600}
