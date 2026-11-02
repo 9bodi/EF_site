@@ -41,12 +41,12 @@ Légende : 🔴 critique · 🟠 important · 🟡 mineur · ✅ corrigé sur la
 | I4 | Page contact sans metadata propre (composant client) : elle reprenait le titre de l'accueil, d'où un titre dupliqué. | `src/app/contact/page.tsx` | ✅ `src/app/contact/layout.tsx` |
 | I5 | Course JSON-LD avec `price: "0"`, ce qui est faux : la formation est payante, mais financée. Google peut considérer cela comme un balisage trompeur. | `src/components/formations/FormationPage.tsx` | ✅ offre retirée. TODO : tarif réel pour remettre un `Offer` |
 | I6 | FAQ des fiches formation : les réponses ne sont pas dans le HTML tant que l'internaute n'a pas cliqué (rendu conditionnel). Moteurs et IA ne voient que les questions. | `src/components/formations/FormationFAQ.tsx:58` | ✅ réponses toujours présentes dans le HTML (`hidden`), `aria-expanded` ajouté. FAQPage à ajouter une fois le tarif confirmé |
-| I7 | Placeholders visibles en production sur les 5 articles du blog : « [ Capture d'écran stylisée… ] », « [ Visuel article ] ». | `src/components/blog/ArticleLayout.tsx:49-53` | TODO : vraies images, ou masquer le bloc |
+| I7 | Placeholders visibles en production sur les 5 articles du blog : « [ Capture d'écran stylisée… ] », « [ Visuel article ] ». | `src/components/blog/ArticleLayout.tsx:49-53` | ✅ bloc masqué tant qu'aucune image n'est fournie (prop `image` dans `ArticleLayout`). TODO : photos |
 | I8 | Page `/formations/gestion-conflits` déclarée, mais formation absente des données : la page renvoie un 404. Une image de 2,3 Mo existe pourtant. | `src/app/formations/gestion-conflits/page.tsx` | TODO : contenu de la formation, ou suppression de la route |
 | I9 | Page `/services/assurance-elu` orpheline (aucun lien interne) et absente du sitemap. `/notre-organisme/references` absente du sitemap. | `src/app/sitemap.ts` | ✅ ajoutées au sitemap. Lien interne vers assurance-élu : à décider |
-| I10 | Entité floue sur la page d'accueil : le H1 (« Nouveaux élu.e.s : formez-vous… ») ne dit pas ce qu'est Élu Formation. Le mot « agréé » n'apparaît pas dans le premier écran. | `src/components/sections/Hero.tsx` | Proposition en §3 (contenu) |
-| I11 | Description de l'organisme différente partout : « organisme de formation agréé, spécialisé… », « agréé par le Ministère de l'Intérieur », « agréé par l'État depuis 2020 », « Institut de formation agréé par l'État », « l'organisme de référence ». | layout, constants, footer, intra, preview | Phrase unique proposée en §3 |
-| I12 | Images sources très lourdes : `organisme-preview.png` 18 Mo, une dizaine de PNG de plus de 2 Mo (hero, elections, intra, team-building, toutes les formations). `next/image` les redimensionne, mais la première transformation est lente et coûte de la bande passante Netlify. | `public/img/` | TODO : recompresser en WebP/AVIF (moins de 300 Ko). Squoosh est gratuit |
+| I10 | Entité floue sur la page d'accueil : le H1 (« Nouveaux élu.e.s : formez-vous… ») ne dit pas ce qu'est Élu Formation. Le mot « agréé » n'apparaît pas dans le premier écran. | `src/components/sections/Hero.tsx` | ✅ phrase d'entité en tête du paragraphe d'accueil (H1 avec doublet conservé) |
+| I11 | Description de l'organisme différente partout : « organisme de formation agréé, spécialisé… », « agréé par le Ministère de l'Intérieur », « agréé par l'État depuis 2020 », « Institut de formation agréé par l'État », « l'organisme de référence ». | layout, constants, footer, intra, preview | ✅ footer harmonisé (sans « depuis 2020 », non vérifié). À reprendre hors-site |
+| I12 | Images sources très lourdes : `organisme-preview.png` 18 Mo, une dizaine de PNG de plus de 2 Mo (hero, elections, intra, team-building, toutes les formations). `next/image` les redimensionne, mais la première transformation est lente et coûte de la bande passante Netlify. | `public/img/` | ✅ partiel : organisme-preview 18 Mo → 550 Ko, 4 photos en JPEG (~300 Ko), logo DIFE 620 → 67 Ko. Reste les PNG avec canal alpha (hero, formations…) : à convertir avec Squoosh (gratuit) |
 | I13 | Chiffres non sourcés et incohérents : « 95 % d'élus satisfaits », « + de 500 élus formés », « 200 collectivités », « des centaines d'élus ». | `src/lib/constants.ts:22-27`, `/notre-organisme`, `/notre-organisme/references` | TODO : source et date de chaque chiffre |
 | I14 | Témoignages (prénom + initiale, commune anonymisée) : authenticité et consentement à confirmer. Le témoignage par défaut est réutilisé sur les fiches sans témoignage propre. | `src/data/testimonials.ts`, `FormationTestimonial.tsx:7` | TODO : confirmer qu'ils sont réels |
 
@@ -54,13 +54,13 @@ Légende : 🔴 critique · 🟠 important · 🟡 mineur · ✅ corrigé sur la
 
 | # | Constat | Statut |
 |---|---|---|
-| M1 | Redirections (`/services/conseil`, `/formations-pour-ma-commune/intra`, etc.) faites avec `redirect()` dans une page, ce qui donne une redirection temporaire. Mieux : `redirects()` permanentes dans `next.config.ts`. | À faire |
+| M1 | Redirections (`/services/conseil`, `/formations-pour-ma-commune/intra`, etc.) faites avec `redirect()` dans une page, ce qui donne une redirection temporaire. | ✅ 308 dans `next.config.ts` |
 | M2 | Logos partenaires : alt « Partenaire 1…8 », balise `<img>` brute sans lazy-loading. | ✅ lazy-loading + TODO noms réels |
 | M3 | JSON-LD sans échappement de `<` (recommandation Next.js). | ✅ |
 | M4 | `duration` du Course (« 4h + 1h en tutorat ») n'est pas au format ISO 8601 (`PT5H`). | TODO : durée exacte |
 | M5 | Pas de JSON-LD `Article` sur les billets de blog (dates uniquement en texte, « Avril 2026 »). | À faire (dates ISO nécessaires) |
 | M6 | Titres longs (plus de 65 caractères avec suffixe) : séminaire intra, assurance, références, simulateur, la plupart des articles de blog. | À raccourcir (contenu) |
-| M7 | Formulaire contact : les `<label>` ne sont pas reliés aux champs (`htmlFor`/`id` absents). | À faire (accessibilité) |
+| M7 | Formulaires : les `<label>` ne sont pas reliés aux champs (`htmlFor`/`id` absents). | ✅ contact, simulateur, newsletter |
 | M8 | `sitemap.lastModified` recalculé à chaque build (toutes les pages semblaient modifiées à chaque déploiement). | ✅ supprimé |
 | M9 | Lint : 6 erreurs préexistantes (guillemets non échappés dans CGV et mentions légales), sans lien avec cet audit. | Info |
 | M10 | Header en composant client et carrousel partenaires en framer-motion : JS supplémentaire au chargement. Impact modéré. | Info |
@@ -85,16 +85,16 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 | 2 | Fusionner sur `main` et déployer les corrections techniques de la branche (robots, sitemap, meta, JSON-LD) | ★★★ | S | Code (après votre validation) |
 | 3 | Afficher numéro et date d'agrément ministériel, numéro de déclaration d'activité unique, certificat Qualiopi (ou retirer la mention) | ★★★ | S | Vous (infos) puis code |
 | 4 | Publier la page « Droit à la formation des élus » à partir du brouillon, après vérification de chaque TODO, avec FAQPage | ★★★ | M | Contenu puis code |
-| 5 | Page d'accueil : H1 et premier paragraphe qui définissent l'entité (proposition ci-dessous) | ★★ | S | Contenu |
+| 5 | ✅ Page d'accueil : premier paragraphe qui définit l'entité | ★★ | S | Fait |
 | 6 | ✅ Réponses de la FAQ formation dans le HTML. FAQPage : après confirmation du tarif (la réponse 1 affirme une prise en charge à 100 %) | ★★ | S | Code |
 | 7 | Inscription Search Console et Bing Webmaster, envoi du sitemap | ★★ | S | Vous |
 | 8 | Actions hors-site du §4 (listes officielles, Google Business Profile, LinkedIn, Wikidata) | ★★★ | M | Vous |
 | 9 | Remplacer les placeholders photo du blog ; ajouter JSON-LD `Article` avec dates ISO | ★★ | M | Contenu + code |
 | 10 | Page formateurs (noms, parcours, mandats exercés), pour l'E-E-A-T et la citation | ★★ | M | Contenu |
-| 11 | Recompresser les images lourdes (I12) | ★★ | S | Code |
+| 11 | ✅ partiel : images lourdes recompressées (I12) | ★★ | S | Fait / reste PNG alpha |
 | 12 | Gestion-conflits : publier ou supprimer ; lien interne vers assurance-élu | ★ | S | Contenu + code |
-| 13 | Redirections permanentes dans `next.config.ts` ; labels du formulaire | ★ | S | Code |
-| 14 | `llms.txt` (voir ci-dessous) | ★ (non prouvé) | S | Code |
+| 13 | ✅ Redirections permanentes ; labels des formulaires | ★ | S | Fait |
+| 14 | ✅ `public/llms.txt` créé | ★ (non prouvé) | S | Fait |
 | 15 | Nettoyage de l'écriture inclusive (§7) | ★ | S | ✅ fait sur le site ; emails eTarget à la main |
 
 **Phrase d'entité unique proposée**, à reprendre à l'identique sur l'accueil, le footer, les mentions légales, le JSON-LD, LinkedIn, Google Business Profile et Wikidata :
@@ -103,7 +103,7 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 
 **H1 d'accueil proposé** (exemple) : « Formation des élus locaux : organisme agréé, financement DIFE ». L'accroche actuelle passe alors en sous-titre.
 
-**Brouillon `llms.txt`** (à placer dans `public/llms.txt`). L'effet de ce fichier sur les IA n'est pas prouvé à ce jour, mais il est gratuit et sans risque :
+**`llms.txt`** (créé dans `public/llms.txt`, à mettre à jour quand l'agrément sera affiché). L'effet de ce fichier sur les IA n'est pas prouvé à ce jour, mais il est gratuit et sans risque :
 
 ```
 # Élu Formation
