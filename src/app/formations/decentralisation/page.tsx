@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 const formation = getFormationBySlug("decentralisation");
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/formations/decentralisation" },
   title: formation?.metaTitle,
   description: formation?.metaDescription,
 };

@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/e-learning" },
   title:
     "E-learning : Bien gérer son image et sa communication d'élu local",
   description:

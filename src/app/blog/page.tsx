@@ -5,6 +5,7 @@ import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog & Ressources - Actualités pour élus locaux",
   description:
     "Guides, conseils et actualités pour les élus locaux. DIFE, prise de parole, budget municipal, droits et devoirs... Ressources gratuites par Élu Formation.",

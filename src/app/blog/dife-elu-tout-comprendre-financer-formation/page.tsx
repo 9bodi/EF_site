@@ -2,6 +2,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/dife-elu-tout-comprendre-financer-formation" },
   title:
     "DIFE élu : qu'est-ce que c'est et comment financer votre formation en 2026 ?",
   description:

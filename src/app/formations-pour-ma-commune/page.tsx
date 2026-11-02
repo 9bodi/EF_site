@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CheckCircle, Users, Clock, MapPin, Building2, UserPlus, RefreshCw } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/formations-pour-ma-commune" },
   title: "Séminaire intra-collectivité - Formation-action pour élus municipaux",
   description:
     "Formez vos élus, soudez votre équipe et construisez votre feuille de route du mandat. Séminaire sur mesure dans votre commune. Organisme agréé.",

@@ -8,6 +8,7 @@ import { formations } from "@/data/formations";
 import { Clock, Monitor, Play, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/formations" },
   title: "Nos formations pour élus locaux | Visio & présentiel",
   description:
     "Des formations à votre rythme, pour réussir votre mandat d'élu local. Prise de parole, budget, urbanisme, IA, réseaux sociaux. Éligibles DIFE.",

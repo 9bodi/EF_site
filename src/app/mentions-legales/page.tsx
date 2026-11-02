@@ -2,6 +2,7 @@
 import Container from "@/components/layout/Container";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/mentions-legales" },
   title: "Mentions légales",
 };
 

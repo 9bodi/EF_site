@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/assurance-elu" },
   title: "Assurance élu, recrutement et conseil pour collectivités",
   description:
     "Au-delà de la formation : assurance protection de l'élu, appui au recrutement de cadres territoriaux, conseil en gestion locale. Contactez nos experts.",

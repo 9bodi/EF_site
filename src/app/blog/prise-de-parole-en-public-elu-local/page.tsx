@@ -2,6 +2,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/prise-de-parole-en-public-elu-local" },
   title:
     "Comment un élu local peut améliorer sa prise de parole en public : conseils et formation",
   description:

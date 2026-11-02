@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/dife-2026-montant-calcul-mode-emploi" },
   title: "DIFE 2026 : nouveaux montants, calcul et mode d'emploi pour les élus locaux",
   description:
     "Réforme DIFE décembre 2026 : 600 € par an, plafond 1 200 €. Tout savoir sur les nouveaux montants, le calcul selon votre situation et les démarches.",

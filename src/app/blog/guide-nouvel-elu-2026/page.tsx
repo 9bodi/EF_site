@@ -2,6 +2,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/guide-nouvel-elu-2026" },
   title:
     "Nouvel élu municipal en 2026 : tout ce que vous devez savoir pour démarrer votre mandat",
   description:

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 const formation = getFormationBySlug("ia-pour-elus");
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/formations/ia-pour-elus" },
   title: formation?.metaTitle,
   description: formation?.metaDescription,
 };

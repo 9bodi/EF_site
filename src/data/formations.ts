@@ -34,7 +34,7 @@ export const formations: Formation[] = [
     shortTitle: "Prise de parole",
     h1: "Prendre la parole en public",
     metaTitle:
-      "Formation prise de parole en public pour élus locaux | Élu Formation",
+      "Formation prise de parole en public pour élus",
     metaDescription:
       "Maîtrisez les clés pour gagner en aisance à l'oral et articuler des messages rapidement, simplement et efficacement. Éligible DIFE.",
     accroche:
@@ -76,7 +76,7 @@ export const formations: Formation[] = [
     shortTitle: "Budget municipal",
     h1: "Bien comprendre le budget et les finances locales",
     metaTitle:
-      "Formation budget municipal pour élus locaux - Comprendre les finances de votre commune | Élu Formation",
+      "Formation budget municipal et finances locales",
     metaDescription:
       "Prenez des décisions financières éclairées en maîtrisant les notions essentielles de la procédure budgétaire. Éligible DIFE.",
     accroche:
@@ -117,7 +117,7 @@ export const formations: Formation[] = [
     shortTitle: "Urbanisme",
     h1: "Urbanisme : appréhender le cadre légal et les responsabilités de l'élu local",
     metaTitle:
-      "Formation urbanisme pour élus locaux - Cadre légal et responsabilités | Élu Formation",
+      "Formation urbanisme pour élus locaux",
     metaDescription:
       "Comprenez les règles et évitez les risques juridiques pour prendre des décisions pertinentes et sécurisées en matière d'urbanisme. Éligible DIFE.",
     accroche:
@@ -164,7 +164,7 @@ export const formations: Formation[] = [
     shortTitle: "Décentralisation",
     h1: "Déchiffrer le mille-feuille de la décentralisation et comprendre le fonctionnement des collectivités territoriales",
     metaTitle:
-      "Formation décentralisation et collectivités territoriales pour élus | Élu Formation",
+      "Formation décentralisation pour élus locaux",
     metaDescription:
       "S'orienter dans le mille-feuille territorial, comprendre le fonctionnement des collectivités et décrypter le système pour agir efficacement. Éligible DIFE.",
     accroche:
@@ -207,7 +207,7 @@ export const formations: Formation[] = [
     shortTitle: "IA pour les élus",
     h1: "Gagner en efficacité avec l'intelligence artificielle générative en tant qu'élus locaux",
     metaTitle:
-      "Formation IA pour élus locaux - Intelligence artificielle générative | Élu Formation",
+      "Formation IA pour élus locaux",
     metaDescription:
       "Comprendre les fondamentaux de l'IA générative, utiliser des outils IA dans vos missions quotidiennes et améliorer votre action d'élu. Éligible DIFE.",
     accroche:
@@ -253,7 +253,7 @@ export const formations: Formation[] = [
     shortTitle: "Fondamentaux du mandat",
     h1: "Formation fondamentaux du mandat pour nouveaux élus - Comprendre son rôle et ses responsabilités",
     metaTitle:
-      "Formation fondamentaux du mandat pour nouveaux élus | Élu Formation",
+      "Formation fondamentaux du mandat d'élu local",
     metaDescription:
       "Vous venez d'être élu(e) en mars 2026. Droits, devoirs, fonctionnement du conseil municipal... La formation de démarrage. Éligible DIFE.",
     accroche:
@@ -292,7 +292,7 @@ export const formations: Formation[] = [
     title: "Communication de l'élu",
     shortTitle: "Communication",
     h1: "Formation communication de l'élu local",
-    metaTitle: "Formation communication de l'élu local | Élu Formation",
+    metaTitle: "Formation communication de l'élu local",
     metaDescription:
       "Apprenez à structurer et diffuser votre communication d'élu local. Formation éligible DIFE.",
     accroche:
@@ -331,7 +331,7 @@ export const formations: Formation[] = [
     shortTitle: "Réseaux sociaux",
     h1: "Réseaux sociaux : maîtriser les fondamentaux pour communiquer et interagir avec ses citoyens",
     metaTitle:
-      "Formation réseaux sociaux pour élus locaux - Communiquer avec ses citoyens | Élu Formation",
+      "Formation réseaux sociaux pour élus locaux",
     metaDescription:
       "Identifiez les réseaux sociaux pertinents, comprenez les codes de chaque plateforme et définissez une stratégie de communication citoyenne adaptée à votre mandat. Éligible DIFE.",
     accroche:

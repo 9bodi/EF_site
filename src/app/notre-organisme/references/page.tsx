@@ -8,6 +8,7 @@ import { STATS } from "@/lib/constants";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/notre-organisme/references" },
   title: "Nos références - Communes et élus qui nous font confiance",
   description:
     "Plus de 500 élus et 200 collectivités formés depuis 2020. Découvrez les témoignages et les communes partenaires d'Élu Formation.",

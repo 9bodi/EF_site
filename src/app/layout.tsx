@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   description:
     "Organisme de formation agréé, spécialisé dans la formation des élus locaux. Formations en ligne et intra-collectivité. Financé jusqu'à 100% par votre DIFE.",
   metadataBase: new URL("https://eluformation.fr"),
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Élu Formation",
+    images: ["/img/LOGO_ELU-FORMATION_RVB.png"],
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/img/LOGO_ELU-FORMATION_favicon.png",

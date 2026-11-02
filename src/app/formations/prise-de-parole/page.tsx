@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 const formation = getFormationBySlug("prise-de-parole");
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/formations/prise-de-parole" },
   title: formation?.metaTitle,
   description: formation?.metaDescription,
 };

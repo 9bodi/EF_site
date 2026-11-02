@@ -1,4 +1,5 @@
-﻿import Hero from "@/components/sections/Hero";
+﻿import type { Metadata } from "next";
+import Hero from "@/components/sections/Hero";
 import ReassuranceBanner from "@/components/sections/ReassuranceBanner";
 import ElectionBanner from "@/components/sections/ElectionBanner";
 import OffersGrid from "@/components/sections/OffersGrid";
@@ -10,6 +11,10 @@ import OrganismePreview from "@/components/sections/OrganismePreview";
 import Newsletter from "@/components/sections/Newsletter";
 import Partners from "@/components/sections/Partners";
 import ElearningPreview from "@/components/sections/ElearningPreview";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

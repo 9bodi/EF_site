@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/reseaux-sociaux-elus-par-ou-commencer" },
   title: "Réseaux sociaux pour élus locaux : par où commencer ?",
   description:
     "Facebook, Instagram, LinkedIn, X… Quel réseau choisir quand on est élu local ? Guide pratique pour se lancer, éviter les erreurs et engager vos citoyens.",
