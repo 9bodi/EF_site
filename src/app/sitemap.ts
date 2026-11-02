@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/financement-formation-elu",
     "/financement-formation-elu/simulateur",
     "/notre-organisme",
+    "/notre-organisme/references",
+    "/services/assurance-elu",
     "/contact",
     "/cgv",
     "/mentions-legales",
@@ -20,9 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/guide-nouvel-elu-2026",
     "/blog/dife-elu-tout-comprendre-financer-formation",
     "/blog/prise-de-parole-en-public-elu-local",
-        "/blog/dife-2026-montant-calcul-mode-emploi",
+    "/blog/dife-2026-montant-calcul-mode-emploi",
     "/blog/reseaux-sociaux-elus-par-ou-commencer",
-
   ];
 
   const formationPages = formations.map((f) => `/formations/${f.slug}`);
@@ -31,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return allPages.map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : path.startsWith("/formations/") || path === "/e-learning" ? 0.8 : path.startsWith("/blog") ? 0.7 : 0.6,
   }));
