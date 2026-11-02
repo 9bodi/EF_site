@@ -123,11 +123,12 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-prenom" className="block text-sm font-medium text-navy mb-1">
                         Prénom *
                       </label>
                       <input
                         type="text"
+                        id="contact-prenom"
                         name="prenom"
                         required
                         value={formData.prenom}
@@ -136,11 +137,12 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-nom" className="block text-sm font-medium text-navy mb-1">
                         Nom *
                       </label>
                       <input
                         type="text"
+                        id="contact-nom"
                         name="nom"
                         required
                         value={formData.nom}
@@ -152,11 +154,12 @@ export default function ContactPage() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-navy mb-1">
                         Email *
                       </label>
                       <input
                         type="email"
+                        id="contact-email"
                         name="email"
                         required
                         value={formData.email}
@@ -165,11 +168,12 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-telephone" className="block text-sm font-medium text-navy mb-1">
                         Téléphone
                       </label>
                       <input
                         type="tel"
+                        id="contact-telephone"
                         name="telephone"
                         value={formData.telephone}
                         onChange={handleChange}
@@ -180,10 +184,11 @@ export default function ContactPage() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-role" className="block text-sm font-medium text-navy mb-1">
                         Vous êtes
                       </label>
                       <select
+                        id="contact-role"
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
@@ -198,10 +203,11 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-navy mb-1">
+                      <label htmlFor="contact-demande" className="block text-sm font-medium text-navy mb-1">
                         Votre demande
                       </label>
                       <select
+                        id="contact-demande"
                         name="demande"
                         value={formData.demande}
                         onChange={handleChange}
@@ -218,10 +224,11 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-navy mb-1">
+                    <label htmlFor="contact-message" className="block text-sm font-medium text-navy mb-1">
                       Votre message
                     </label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       rows={5}
                       value={formData.message}
@@ -233,13 +240,14 @@ export default function ContactPage() {
                   <div className="flex items-start gap-2">
                     <input
                       type="checkbox"
+                      id="contact-rgpd"
                       name="rgpd"
                       required
                       checked={formData.rgpd}
                       onChange={handleChange}
                       className="mt-1 accent-red"
                     />
-                    <label className="text-xs text-gray-text">
+                    <label htmlFor="contact-rgpd" className="text-xs text-gray-text">
                       J&apos;accepte que mes données soient traitées par Élu
                       Formation dans le cadre de ma demande. Vos données restent
                       confidentielles et ne seront jamais revendues.

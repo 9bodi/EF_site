@@ -150,10 +150,11 @@ export default function SimulateurPage() {
 
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="simu-fonction" className="block text-sm font-semibold text-navy mb-2">
                       Votre fonction
                     </label>
                     <select
+                      id="simu-fonction"
                       value={mandat}
                       onChange={(e) => setMandat(e.target.value)}
                       className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
@@ -167,10 +168,11 @@ export default function SimulateurPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="simu-election" className="block text-sm font-semibold text-navy mb-2">
                       Votre élection
                     </label>
                     <select
+                      id="simu-election"
                       value={election}
                       onChange={(e) => setElection(e.target.value)}
                       className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
@@ -182,7 +184,7 @@ export default function SimulateurPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="simu-montant" className="block text-sm font-semibold text-navy mb-2">
                       Montant DIFE déjà utilisé (€)
                     </label>
                     <input
@@ -190,6 +192,7 @@ export default function SimulateurPage() {
                       min={0}
                       max={1200}
                       step={10}
+                      id="simu-montant"
                       value={montantUtilise}
                       onChange={(e) => setMontantUtilise(Number(e.target.value))}
                       className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
@@ -227,6 +230,7 @@ export default function SimulateurPage() {
                 </p>
                 <input
                   type="email"
+                  aria-label="Votre adresse e-mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full max-w-md mx-auto rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-center"

@@ -33,6 +33,7 @@ export default function Newsletter() {
             type="email"
             required
             placeholder="Votre adresse email"
+            aria-label="Votre adresse email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex-1 px-4 py-3 rounded-lg text-navy bg-white border-0 focus:ring-2 focus:ring-red outline-none"
