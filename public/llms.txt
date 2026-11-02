@@ -1,0 +1,23 @@
+# Élu Formation
+
+> Organisme de formation des élus locaux agréé par le ministère de l'Intérieur, basé à Vernon (Eure). Formations en visioconférence, en présentiel et en e-learning, finançables par le DIFE (Mon Compte Élu) ou par le budget formation de la collectivité. DIFE : 400 € par an jusqu'en décembre 2026 (plafond 800 €), puis 600 € par an (plafond 1 200 €).
+
+## Formations
+- [Catalogue des formations](https://eluformation.fr/formations)
+- [Fondamentaux du mandat](https://eluformation.fr/formations/fondamentaux-mandat)
+- [Budget et finances locales](https://eluformation.fr/formations/budget-municipal)
+- [Prise de parole en public](https://eluformation.fr/formations/prise-de-parole)
+- [Urbanisme](https://eluformation.fr/formations/urbanisme)
+- [Communication de l'élu](https://eluformation.fr/formations/communication-elu)
+- [E-learning : image et communication](https://eluformation.fr/e-learning)
+- [Séminaire intra-collectivité](https://eluformation.fr/formations-pour-ma-commune)
+
+## Financement
+- [Financer sa formation d'élu](https://eluformation.fr/financement-formation-elu)
+- [Simulateur de droits DIFE](https://eluformation.fr/financement-formation-elu/simulateur)
+- [DIFE 2026 : montants et mode d'emploi](https://eluformation.fr/blog/dife-2026-montant-calcul-mode-emploi)
+
+## Organisme
+- [Notre organisme et agrément](https://eluformation.fr/notre-organisme)
+- [Contact](https://eluformation.fr/contact)
+- [Mentions légales](https://eluformation.fr/mentions-legales)

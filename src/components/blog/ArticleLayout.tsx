@@ -1,13 +1,16 @@
 ﻿import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
+import Image from "next/image";
 
 interface ArticleLayoutProps {
   category: string;
   date: string;
   readTime: string;
   title: string;
+  // Consigne interne pour la future photo (non affichée)
   photoNote: string;
+  image?: { src: string; alt: string };
   children: React.ReactNode;
   cta: {
     label: string;
@@ -21,7 +24,7 @@ export default function ArticleLayout({
   date,
   readTime,
   title,
-  photoNote,
+  image,
   children,
   cta,
 }: ArticleLayoutProps) {
@@ -42,16 +45,16 @@ export default function ArticleLayout({
         </Container>
       </section>
 
-      {/* Image bannière */}
-      <section className="bg-white border-b border-gray-200">
-        <Container className="max-w-3xl py-8">
-          <div className="aspect-[16/7] rounded-2xl bg-gray-warm border border-gray-200 flex items-center justify-center">
-            <p className="text-gray-400 text-sm text-center px-8">
-              [ {photoNote} ]
-            </p>
-          </div>
-        </Container>
-      </section>
+      {/* Image bannière : affichée seulement quand une vraie photo est fournie */}
+      {image && (
+        <section className="bg-white border-b border-gray-200">
+          <Container className="max-w-3xl py-8">
+            <div className="relative aspect-[16/7] rounded-2xl overflow-hidden border border-gray-200">
+              <Image src={image.src} alt={image.alt} fill className="object-cover" priority />
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Corps article */}
       <section className="py-12 md:py-16 bg-white">
