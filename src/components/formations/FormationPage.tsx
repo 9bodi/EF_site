@@ -14,11 +14,8 @@ function getCourseSchema(formation: Formation) {
     "@type": "Course",
     name: formation.title,
     description: formation.metaDescription,
-    provider: {
-      "@type": "EducationalOrganization",
-      name: "Élu Formation",
-      url: "https://eluformation.fr",
-    },
+    url: `https://eluformation.fr/formations/${formation.slug}`,
+    provider: { "@id": "https://eluformation.fr/#organization" },
     educationalLevel: "Tous niveaux",
     audience: {
       "@type": "Audience",
@@ -27,13 +24,6 @@ function getCourseSchema(formation: Formation) {
     inLanguage: "fr",
     courseMode: formation.format.includes("Distanciel") ? "Online" : "Onsite",
     duration: formation.duree,
-    offers: {
-      "@type": "Offer",
-      category: "Éligible DIFE",
-      priceCurrency: "EUR",
-      price: "0",
-      description: formation.tarif,
-    },
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: formation.format.includes("Distanciel") ? "Online" : "Onsite",
@@ -45,14 +35,31 @@ function getCourseSchema(formation: Formation) {
   };
 }
 
+function getBreadcrumbSchema(formation: Formation) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://eluformation.fr" },
+      { "@type": "ListItem", position: 2, name: "Formations", item: "https://eluformation.fr/formations" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: formation.title,
+        item: `https://eluformation.fr/formations/${formation.slug}`,
+      },
+    ],
+  };
+}
+
 export default function FormationPage({ formation }: { formation: Formation }) {
-  const courseSchema = getCourseSchema(formation);
+  const schemas = [getCourseSchema(formation), getBreadcrumbSchema(formation)];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas).replace(/</g, "\\u003c") }}
       />
 
       <FormationHeader formation={formation} />

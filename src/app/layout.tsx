@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
+const organization = {
   "@type": "EducationalOrganization",
+  "@id": "https://eluformation.fr/#organization",
   name: "Élu Formation",
   legalName: "Place de la République SAS",
   url: "https://eluformation.fr",
@@ -47,6 +47,21 @@ const organizationSchema = {
   sameAs: ["https://linkedin.com/company/eluformation"],
   foundingDate: "2020",
   taxID: "FR54892385949",
+};
+
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    organization,
+    {
+      "@type": "WebSite",
+      "@id": "https://eluformation.fr/#website",
+      url: "https://eluformation.fr",
+      name: "Élu Formation",
+      inLanguage: "fr",
+      publisher: { "@id": "https://eluformation.fr/#organization" },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -74,7 +89,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
+            __html: JSON.stringify(siteSchema).replace(/</g, "\\u003c"),
           }}
         />
       </head>
