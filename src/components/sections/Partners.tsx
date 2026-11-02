@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 import SectionTitle from "@/components/ui/SectionTitle";
 
+// TODO: remplacer "Partenaire N" par le nom réel de chaque partenaire (utilisé comme texte alt)
 const partners = [
   { name: "Partenaire 1", logo: "/img/partners/partner1.png", size: "h-8 md:h-12" },
   { name: "Partenaire 2", logo: "/img/partners/partner2.png", size: "h-16 md:h-24" },
@@ -52,6 +53,8 @@ export default function Partners() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
+                  loading="lazy"
+                  decoding="async"
                   className={`${partner.size} w-auto object-contain`}
                 />
               </div>
