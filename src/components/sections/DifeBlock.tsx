@@ -30,7 +30,7 @@ export default function DifeBlock() {
               <p>
                 Depuis 2022, chaque élu local dispose d&apos;un{" "}
                 <strong className="text-navy">
-                  Droit Individuel à la Formation (DIFE) de 800&nbsp;euros
+                  Droit Individuel à la Formation (DIFE) de 400&nbsp;euros par an, porté à 600&nbsp;euros à partir de décembre 2026
                 </strong>
                 , mobilisable directement sur Mon Compte Élu
                 (moncompteformation.gouv.fr). Ce droit est financé par la Caisse
@@ -105,7 +105,7 @@ export default function DifeBlock() {
                 400&nbsp;€
               </p>
               <p className="text-sm text-gray-text mt-2">
-                par an et par élu, cumulables
+                par an et par élu jusqu&apos;en décembre 2026, puis 600&nbsp;€ (plafond 1&nbsp;200&nbsp;€)
               </p>
               <p className="text-xs text-gray-400 mt-1">
                 Financé par la Caisse des Dépôts

@@ -41,7 +41,7 @@ export default function ElectionBanner() {
   <ul className="space-y-2 ml-4">
     <li className="flex items-start gap-2">
       <span className="text-red font-bold mt-0.5">•</span>
-      <span>Mobiliser directement son <strong className="text-navy">Droit Individuel à la Formation (DIFE)</strong>, d&apos;un montant de 800&nbsp;euros au démarrage de la mandature et réabondé chaque année par la Caisse des Dépôts et Consignations.</span>
+      <span>Mobiliser directement son <strong className="text-navy">Droit Individuel à la Formation (DIFE)</strong>, crédité chaque année par la Caisse des Dépôts et Consignations : 400&nbsp;euros par an jusqu&apos;en décembre 2026 (plafond 800&nbsp;euros), puis 600&nbsp;euros par an (plafond 1&nbsp;200&nbsp;euros).</span>
     </li>
     <li className="flex items-start gap-2">
       <span className="text-red font-bold mt-0.5">•</span>

@@ -24,7 +24,7 @@ Légende : 🔴 critique · 🟠 important · 🟡 mineur · ✅ corrigé sur la
 
 | # | Constat | Où | Statut |
 |---|---|---|---|
-| C1 | Montants DIFE contradictoires : « 800 € par an » (FAQ de toutes les fiches formation, page d'accueil, guide nouvel élu), « 400 €/an plafond 800 € » (article DIFE d'avril), « 600 €/an plafond 1 200 € » (simulateur, financement, article d'octobre). | `src/components/formations/FormationFAQ.tsx:17`, `src/components/sections/DifeBlock.tsx:33`, `src/components/sections/ElectionBanner.tsx:44`, `src/app/blog/guide-nouvel-elu-2026/page.tsx:58,119`, `src/app/blog/dife-elu-tout-comprendre-financer-formation/page.tsx:8,28-29,45-47,96-100` | TODO contenu : choisir le montant officiel en vigueur, le sourcer, puis l'harmoniser partout |
+| C1 | Montants DIFE contradictoires : « 800 € par an » (FAQ de toutes les fiches formation, page d'accueil, guide nouvel élu), « 400 €/an plafond 800 € » (article DIFE d'avril), « 600 €/an plafond 1 200 € » (simulateur, financement, article d'octobre). | `src/components/formations/FormationFAQ.tsx:17`, `src/components/sections/DifeBlock.tsx:33`, `src/components/sections/ElectionBanner.tsx:44`, `src/app/blog/guide-nouvel-elu-2026/page.tsx:58,119`, `src/app/blog/dife-elu-tout-comprendre-financer-formation/page.tsx:8,28-29,45-47,96-100` | ✅ harmonisé : 400 €/an jusqu'en décembre 2026 (plafond 800 €), puis 600 €/an (plafond 1 200 €), cumul sur deux ans au maximum |
 | C2 | `robot.ts` au lieu de `robots.ts` : `/robots.txt` absent du site. | `src/app/robot.ts` | ✅ renommé, robots IA autorisés explicitement |
 | C3 | Agrément ministériel annoncé partout mais sans numéro, ni date, ni lien vers la liste officielle. | footer, `/notre-organisme`, JSON-LD | TODO : numéro et date d'agrément |
 | C4 | Deux numéros de déclaration d'activité : `28 27 02957 27` (footer, via `SITE.legal.qualiopi`) et `32591105559` (mentions légales et `/notre-organisme`). Le préfixe « 32 » ne correspond normalement pas à la Normandie, qui est pourtant indiquée. | `src/lib/constants.ts:17`, `src/app/mentions-legales/page.tsx:53`, `src/app/notre-organisme/page.tsx:187` | TODO : numéro exact |
@@ -40,7 +40,7 @@ Légende : 🔴 critique · 🟠 important · 🟡 mineur · ✅ corrigé sur la
 | I3 | Aucune balise Open Graph (partages LinkedIn ou Facebook sans aperçu). | `src/app/layout.tsx` | ✅ OG global (site_name, locale, type, image). TODO : une vraie image 1200×630 |
 | I4 | Page contact sans metadata propre (composant client) : elle reprenait le titre de l'accueil, d'où un titre dupliqué. | `src/app/contact/page.tsx` | ✅ `src/app/contact/layout.tsx` |
 | I5 | Course JSON-LD avec `price: "0"`, ce qui est faux : la formation est payante, mais financée. Google peut considérer cela comme un balisage trompeur. | `src/components/formations/FormationPage.tsx` | ✅ offre retirée. TODO : tarif réel pour remettre un `Offer` |
-| I6 | FAQ des fiches formation : les réponses ne sont pas dans le HTML tant que l'internaute n'a pas cliqué (rendu conditionnel). Moteurs et IA ne voient que les questions. | `src/components/formations/FormationFAQ.tsx:58` | À faire **après** correction de C1, sinon on rend crawlable le chiffre faux de 800 €/an |
+| I6 | FAQ des fiches formation : les réponses ne sont pas dans le HTML tant que l'internaute n'a pas cliqué (rendu conditionnel). Moteurs et IA ne voient que les questions. | `src/components/formations/FormationFAQ.tsx:58` | ✅ réponses toujours présentes dans le HTML (`hidden`), `aria-expanded` ajouté. FAQPage à ajouter une fois le tarif confirmé |
 | I7 | Placeholders visibles en production sur les 5 articles du blog : « [ Capture d'écran stylisée… ] », « [ Visuel article ] ». | `src/components/blog/ArticleLayout.tsx:49-53` | TODO : vraies images, ou masquer le bloc |
 | I8 | Page `/formations/gestion-conflits` déclarée, mais formation absente des données : la page renvoie un 404. Une image de 2,3 Mo existe pourtant. | `src/app/formations/gestion-conflits/page.tsx` | TODO : contenu de la formation, ou suppression de la route |
 | I9 | Page `/services/assurance-elu` orpheline (aucun lien interne) et absente du sitemap. `/notre-organisme/references` absente du sitemap. | `src/app/sitemap.ts` | ✅ ajoutées au sitemap. Lien interne vers assurance-élu : à décider |
@@ -81,12 +81,12 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 
 | Priorité | Action | Impact | Effort | Qui |
 |---|---|---|---|---|
-| 1 | Fixer le montant officiel du DIFE (source + date), l'harmoniser dans les 8 emplacements de C1 et ajouter « Source : … , mis à jour le … » | ★★★ | S | Contenu (vous) puis code |
+| 1 | ✅ Montants DIFE harmonisés. Reste à ajouter « Source : … , mis à jour le … » sous les blocs DIFE | ★★★ | S | Contenu (vous) puis code |
 | 2 | Fusionner sur `main` et déployer les corrections techniques de la branche (robots, sitemap, meta, JSON-LD) | ★★★ | S | Code (après votre validation) |
 | 3 | Afficher numéro et date d'agrément ministériel, numéro de déclaration d'activité unique, certificat Qualiopi (ou retirer la mention) | ★★★ | S | Vous (infos) puis code |
 | 4 | Publier la page « Droit à la formation des élus » à partir du brouillon, après vérification de chaque TODO, avec FAQPage | ★★★ | M | Contenu puis code |
 | 5 | Page d'accueil : H1 et premier paragraphe qui définissent l'entité (proposition ci-dessous) | ★★ | S | Contenu |
-| 6 | Rendre les réponses de la FAQ formation présentes dans le HTML et ajouter FAQPage (après le point 1) | ★★ | S | Code |
+| 6 | ✅ Réponses de la FAQ formation dans le HTML. FAQPage : après confirmation du tarif (la réponse 1 affirme une prise en charge à 100 %) | ★★ | S | Code |
 | 7 | Inscription Search Console et Bing Webmaster, envoi du sitemap | ★★ | S | Vous |
 | 8 | Actions hors-site du §4 (listes officielles, Google Business Profile, LinkedIn, Wikidata) | ★★★ | M | Vous |
 | 9 | Remplacer les placeholders photo du blog ; ajouter JSON-LD `Article` avec dates ISO | ★★ | M | Contenu + code |
@@ -147,7 +147,7 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 
 ## 5. Liste des TODO (informations que vous devez fournir)
 
-1. **Montant officiel actuel du DIFE** : montant annuel, plafond, date d'entrée en vigueur, texte source (décret ou arrêté). Également à vérifier : le coût horaire maximal (80 € puis 100 € HT ?) et « l'arrêté du 28 août 2026 » cité dans le simulateur.
+1. ~~Montant du DIFE~~ : confirmé (400 €/an et plafond 800 € jusqu'en décembre 2026, puis 600 €/an et plafond 1 200 €). Reste à vérifier : le texte source exact à citer, le coût horaire maximal (80 € puis 100 € HT ?), « l'arrêté du 28 août 2026 » et le complément de 200 € pour 2026 cités dans le simulateur et l'article d'octobre.
 2. **Numéro et date de l'agrément ministériel** (formation des élus).
 3. **Numéro de déclaration d'activité exact** : `32591105559` ou `28 27 02957 27` ? Et préfecture de région d'enregistrement.
 4. **Certification Qualiopi** : numéro, certificateur, date de validité, ou confirmation qu'il faut retirer la mention.

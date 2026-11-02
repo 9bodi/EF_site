@@ -56,8 +56,8 @@ export default function GuideNouvelElu() {
         Voici les principaux :
       </p>
       <p>
-        <strong>Droit à la formation :</strong> 800 euros de budget formation
-        par an, financé par la Caisse des Dépôts (DIFE). Disponible pour tous
+        <strong>Droit à la formation :</strong> 400 euros par an jusqu&apos;en
+        décembre 2026, puis 600 euros par an, financés par la Caisse des Dépôts (DIFE). Disponible pour tous
         les élus, même non indemnisés.
       </p>
       <p>
@@ -117,9 +117,10 @@ export default function GuideNouvelElu() {
         utiliser en priorité.
       </p>
       <p>
-        800 euros par an, financés par la Caisse des Dépôts. Pas un centime du
+        400 euros par an jusqu&apos;en décembre 2026 (plafond 800 euros), puis
+        600 euros par an (plafond 1 200 euros), financés par la Caisse des Dépôts. Pas un centime du
         budget communal. Utilisables pour toutes les formations agréées par le
-        Ministère de l&apos;Intérieur. Cumulables d&apos;une année sur l&apos;autre.
+        Ministère de l&apos;Intérieur. Cumulables sur deux ans au maximum.
       </p>
       <p>
         En pratique : vous vous inscrivez via Mon Compte Élu

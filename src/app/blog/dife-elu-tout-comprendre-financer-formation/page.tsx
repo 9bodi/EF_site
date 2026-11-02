@@ -95,8 +95,8 @@ export default function DifeToutComprendre() {
       <h2>Combien ai-je sur mon compte DIFE ?</h2>
       <p>
         Si vous avez été élu en mars 2026, votre premier crédit de 400 € a
-        été versé à l&apos;ouverture de votre mandat. Vous atteindrez le plafond de
-        800 € dès la deuxième année. Si vous avez été réélu, vos droits non
+        été versé à l&apos;ouverture de votre mandat. Avec la réforme de décembre 2026,
+        le crédit annuel passe à 600 € et le plafond à 1 200 €. Si vous avez été réélu, vos droits non
         utilisés lors du mandat précédent ont été conservés (dans la limite du
         plafond de 800 €) et un nouveau crédit de 400 € s&apos;y est ajouté.
       </p>

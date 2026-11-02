@@ -14,7 +14,7 @@ const defaultFAQ: FAQItem[] = [
     question:
       "Le financement DIFE couvre-t-il l'intégralité de cette formation ?",
     answer:
-      "Oui, dans la grande majorité des cas. Votre DIFE élu vous donne droit à 800 euros de formation par an. Le tarif de cette session étant inférieur ou égal à ce montant, elle peut être prise en charge à 100 % via Mon Compte Élu. Notre équipe vous accompagne dans toutes les démarches.",
+      "Oui, dans la grande majorité des cas. Votre DIFE élu est crédité de 400 € par an jusqu'en décembre 2026 (plafond 800 €), puis de 600 € par an (plafond 1 200 €). Le tarif de cette session étant inférieur ou égal à ce montant, elle peut être prise en charge à 100 % via Mon Compte Élu. Notre équipe vous accompagne dans toutes les démarches.",
   },
   {
     question:
@@ -47,6 +47,7 @@ export default function FormationFAQ({ faq }: { faq?: FAQItem[] }) {
               className="bg-gray-warm rounded-xl border border-gray-200 overflow-hidden"
             >
               <button
+                aria-expanded={openIndex === i}
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer"
               >
@@ -60,13 +61,12 @@ export default function FormationFAQ({ faq }: { faq?: FAQItem[] }) {
                 />
               </button>
 
-              {openIndex === i && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-text text-sm leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              )}
+              {/* Toujours rendu dans le HTML (lisible par moteurs et IA), masqué tant que fermé */}
+              <div className="px-6 pb-4" hidden={openIndex !== i}>
+                <p className="text-gray-text text-sm leading-relaxed">
+                  {item.answer}
+                </p>
+              </div>
             </div>
           ))}
         </div>
