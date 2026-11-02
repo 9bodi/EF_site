@@ -187,7 +187,7 @@ export default function FinancementPage() {
 
           <div className="bg-gray-warm rounded-xl p-5 border border-gray-200 mb-6">
             <p className="text-sm text-gray-text">
-              <strong className="text-navy">Vous êtes bloqué(e) ?</strong> Notre équipe peut vous guider pour créer votre accès, retrouver votre compte ou finaliser votre inscription.
+              <strong className="text-navy">Un blocage ?</strong> Notre équipe peut vous guider pour créer votre accès, retrouver votre compte ou finaliser votre inscription.
             </p>
           </div>
         </Container>

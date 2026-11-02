@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="max-w-xl">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading leading-tight">
 
-  Nouveaux élu.e.s :
+  Nouvelles élues, nouveaux élus :
   <br />
   <span className="text-red">formez-vous maintenant pour bien commencer votre mandat.</span>
 </h1>

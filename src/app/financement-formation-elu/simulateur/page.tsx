@@ -6,17 +6,17 @@ import Button from "@/components/ui/Button";
 import { Euro, Calendar, Info, CheckCircle, ArrowRight, AlertTriangle } from "lucide-react";
 
 const mandatOptions = [
-  { label: "Conseiller(ère) municipal(e)", value: "municipal" },
+  { label: "Conseiller municipal", value: "municipal" },
   { label: "Maire", value: "maire" },
-  { label: "Adjoint(e) au maire", value: "adjoint" },
-  { label: "Conseiller(ère) départemental(e)", value: "departemental" },
-  { label: "Conseiller(ère) régional(e)", value: "regional" },
+  { label: "Adjoint au maire", value: "adjoint" },
+  { label: "Conseiller départemental", value: "departemental" },
+  { label: "Conseiller régional", value: "regional" },
 ];
 
 const electionOptions = [
-  { label: "Élu(e) en mars 2026", value: "elu-2026" },
-  { label: "Réélu(e) en mars 2026", value: "reelu-2026" },
-  { label: "Non réélu(e)", value: "non-reelu" },
+  { label: "Élu en mars 2026", value: "elu-2026" },
+  { label: "Réélu en mars 2026", value: "reelu-2026" },
+  { label: "Non réélu", value: "non-reelu" },
 ];
 
 function calculerDIFE(election: string, montantUtilise: number): {

@@ -255,9 +255,9 @@ export const formations: Formation[] = [
     metaTitle:
       "Formation fondamentaux du mandat d'élu local",
     metaDescription:
-      "Vous venez d'être élu(e) en mars 2026. Droits, devoirs, fonctionnement du conseil municipal... La formation de démarrage. Éligible DIFE.",
+      "Vous venez d'être élu en mars 2026. Droits, devoirs, fonctionnement du conseil municipal... La formation de démarrage. Éligible DIFE.",
     accroche:
-      "Vous venez d'être élu(e) en mars 2026. Bienvenue dans l'une des aventures civiques les plus exigeantes et les plus enrichissantes qui soit. Cette formation est votre point de départ.",
+      "Vous venez d'être élu en mars 2026. Bienvenue dans l'une des aventures civiques les plus exigeantes et les plus enrichissantes qui soit. Cette formation est votre point de départ.",
     format: "Distanciel ou présentiel",
     duree: "4h + 1h en tutorat",
     financement: "Éligible DIFE - Mon Compte Élu",

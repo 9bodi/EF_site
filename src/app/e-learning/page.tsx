@@ -42,7 +42,7 @@ const modules: Module[] = [
     title: "Introduction générale",
     isIntro: true,
     description:
-      "Bienvenue dans cette formation en ligne pour apprendre à bien gérer son image et sa communication d'élu(e) local(e). Découvrez la structure du parcours, les objectifs et ce que vous allez apprendre.",
+      "Bienvenue dans cette formation en ligne pour apprendre à bien gérer son image et sa communication d'élu local. Découvrez la structure du parcours, les objectifs et ce que vous allez apprendre.",
     points: [
       "Comprendre les objectifs de la formation",
       "Découvrir la structure en 11 modules",
@@ -234,7 +234,7 @@ export default function ElearningPage() {
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-tight">
-                Bien gérer son image et sa communication d&apos;élu(e) local(e)
+                Bien gérer son image et sa communication d&apos;élu local
               </h1>
 
               <p className="mt-6 text-lg text-gray-300 leading-relaxed">
@@ -518,7 +518,7 @@ export default function ElearningPage() {
       <section className="py-16 md:py-24 bg-navy text-center">
         <Container className="max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-heading mb-4">
-            Prêt(e) à maîtriser votre communication d&apos;élu ?
+            Prêt à maîtriser votre communication d&apos;élu ?
           </h2>
           <p className="text-gray-300 mb-3">
             Commencez la formation dès aujourd&apos;hui - 11 modules +

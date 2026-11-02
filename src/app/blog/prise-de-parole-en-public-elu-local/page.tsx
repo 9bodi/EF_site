@@ -16,7 +16,7 @@ export default function PriseDeParoleArticle() {
       date="Avril 2026"
       readTime="5 min"
       title="Comment un élu local peut améliorer sa prise de parole en public : conseils et formation"
-      photoNote="Élu(e) en train de prendre la parole devant une assemblée, ambiance authentique, salle des fêtes ou conseil municipal"
+      photoNote="Élu en train de prendre la parole devant une assemblée, ambiance authentique, salle des fêtes ou conseil municipal"
       cta={{
         label: "Découvrir la formation Prise de parole en public",
         subtitle: "Prochaines dates disponibles - Éligible DIFE",

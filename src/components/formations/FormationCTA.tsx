@@ -25,7 +25,7 @@ export default function FormationCTA({ formateur }: { formateur: string }) {
           {/* CTAs */}
           <div className="bg-navy rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white font-heading">
-              Prêt(e) à vous former ?
+              Prêt à vous former ?
             </h2>
             <p className="mt-3 text-gray-300">
               Inscription en ligne ou rappel par un conseiller - c&apos;est vous qui choisissez.

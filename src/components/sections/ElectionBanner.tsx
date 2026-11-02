@@ -22,7 +22,7 @@ export default function ElectionBanner() {
           {/* Texte */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-navy font-heading leading-tight">
-              Vous avez été élu(e) en mars 2026 - votre mandat de 6 ans
+              Vous avez été élu en mars 2026 - votre mandat de 6 ans
               commence.
             </h2>
 

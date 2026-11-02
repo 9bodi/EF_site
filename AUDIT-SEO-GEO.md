@@ -95,7 +95,7 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 | 12 | Gestion-conflits : publier ou supprimer ; lien interne vers assurance-élu | ★ | S | Contenu + code |
 | 13 | Redirections permanentes dans `next.config.ts` ; labels du formulaire | ★ | S | Code |
 | 14 | `llms.txt` (voir ci-dessous) | ★ (non prouvé) | S | Code |
-| 15 | Nettoyage de l'écriture inclusive (§7) | ★ | S | Code, après votre accord |
+| 15 | Nettoyage de l'écriture inclusive (§7) | ★ | S | ✅ fait sur le site ; emails eTarget à la main |
 
 **Phrase d'entité unique proposée**, à reprendre à l'identique sur l'accueil, le footer, les mentions légales, le JSON-LD, LinkedIn, Google Business Profile et Wikidata :
 
@@ -162,8 +162,8 @@ Impact : ★★★ fort · Effort : S (moins d'une heure) / M (une demi-journée
 13. **Photos du blog** (5 articles).
 14. **Formation « Gestion des conflits »** : contenu à fournir, ou suppression.
 15. **Brouillon « Droit à la formation »** : vérifier chaque `TODO: vérifier` dans `drafts/droit-formation-elus.md`.
-16. **Formulaire contact** : changer « Adjoint(e) » en « Adjoint » modifie la valeur envoyée à eTarget. Vos segments ou filtres eTarget en dépendent-ils ?
-17. **Emails transactionnels** : ils sont rédigés dans eTarget (pas dans le code). Le nettoyage de l'écriture inclusive y est à faire à la main.
+16. ~~Formulaire contact / eTarget~~ : confirmé sans impact, modification appliquée.
+17. **Emails transactionnels eTarget** : retirer l'écriture inclusive à la main dans les modèles d'emails eTarget (contact et simulateur), avec les mêmes règles qu'au §7.
 
 ---
 
@@ -201,7 +201,9 @@ Point de départ (scan I AM RANK) : 0 citation sur les 5 IA.
 
 ---
 
-## 7. Écriture inclusive — liste avant / après (NON appliquée, en attente de votre accord)
+## 7. Écriture inclusive — liste avant / après (APPLIQUÉE le 2 novembre 2026)
+
+Décisions : doublets conservés dans les deux accroches ⚑ (#1 → « Nouvelles élues, nouveaux élus : », #2 inchangé « celles et ceux »), valeurs du formulaire contact modifiées (pas d'impact eTarget confirmé), emails eTarget à reprendre à la main (TODO 17).
 
 Recherche lancée sur `src/` (`.tsx`, `.ts`), hors `node_modules`, `.next`, `public`. Formes recherchées : point médian, point (`élu.e.s`), parenthèses (`élu(e)`, `(ère)`), barre oblique et doublets. Aucune occurrence dans `public/`, ni dans les routes API.
 

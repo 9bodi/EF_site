@@ -24,7 +24,7 @@ export default function ReseauxSociauxElus() {
 
     >
       <p>
-        Vous êtes élu(e) local(e) et vous entendez partout qu&apos;il faut « être
+        Vous êtes élu local et vous entendez partout qu&apos;il faut « être
         sur les réseaux ». Mais entre Facebook, Instagram, LinkedIn, X (ex-Twitter)
         et TikTok, par où commencer ? Et surtout : est-ce vraiment utile pour
         votre mandat ? La réponse est oui — à condition de s&apos;y prendre

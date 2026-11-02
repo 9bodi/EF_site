@@ -7,8 +7,8 @@ import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 
 const roles = [
   "Maire",
-  "Adjoint(e)",
-  "Conseiller(e) municipal(e)",
+  "Adjoint",
+  "Conseiller municipal",
   "DGS",
   "Secrétaire de mairie",
   "Autre",

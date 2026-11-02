@@ -23,7 +23,7 @@ export default function Dife2026MontantCalcul() {
       }}
     >
       <p>
-        Vous avez été élu(e) ou réélu(e) en mars 2026. Vous savez peut-être que
+        Vous avez été élu ou réélu en mars 2026. Vous savez peut-être que
         vous disposez d&apos;un droit à la formation, mais combien avez-vous
         exactement sur votre compte ? Comment le montant est-il calculé ? Et
         surtout, qu&apos;est-ce qui change avec la réforme qui entre en vigueur
@@ -82,10 +82,10 @@ export default function Dife2026MontantCalcul() {
         Un complément de 200 € devrait être versé suite à la réforme, portant
         votre crédit 2026 à 600 €. En 2027, vous recevrez un nouveau crédit de
         600 €, pour atteindre le plafond de 1 200 €. Si vous n&apos;avez jamais
-        été élu(e) auparavant, vous partez de zéro — pas de droits antérieurs.
+        été élu auparavant, vous partez de zéro — pas de droits antérieurs.
       </p>
 
-      <h3>Réélu(e) en mars 2026</h3>
+      <h3>Réélu en mars 2026</h3>
       <p>
         Vos droits non utilisés du mandat 2020-2026 ont été conservés, dans la
         limite de l&apos;ancien plafond de 800 €. Un crédit de 400 € (bientôt
@@ -99,7 +99,7 @@ export default function Dife2026MontantCalcul() {
         plafond supérieur vous permet de cumuler davantage.
       </p>
 
-      <h3>Non réélu(e)</h3>
+      <h3>Non réélu</h3>
       <p>
         Vos droits acquis pendant le mandat précédent restent disponibles
         pendant <strong>6 mois après la fin de votre mandat</strong>. Passé ce

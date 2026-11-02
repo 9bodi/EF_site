@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Nouvel élu municipal en 2026 : tout ce que vous devez savoir pour démarrer votre mandat",
   description:
-    "Vous venez d'être élu(e) lors des municipales de mars 2026. Droits à la formation, responsabilités, premiers pas au conseil... Notre guide complet pour les nouveaux élus.",
+    "Vous venez d'être élu lors des municipales de mars 2026. Droits à la formation, responsabilités, premiers pas au conseil... Notre guide complet pour les nouveaux élus.",
 };
 
 export default function GuideNouvelElu() {
@@ -24,7 +24,7 @@ export default function GuideNouvelElu() {
       }}
     >
       <p>
-        Les résultats sont tombés. Vous avez été élu(e) en mars dernier. Après
+        Les résultats sont tombés. Vous avez été élu en mars dernier. Après
         la joie et les félicitations, vient maintenant l&apos;heure des premières
         responsabilités. Conseil municipal d&apos;installation, prise de fonction,
         découverte des dossiers en cours... Le calendrier s&apos;emballe vite.
